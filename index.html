@@ -49,7 +49,7 @@
       </div>
       <div class="loader-text-wrap">
         <p class="loader-subtitle">Igniting Engine</p>
-        <img src="assets/logo.jpg" alt="Social Sigma Logo" class="loader-logo">
+        <img src="assets/logo-white.svg" alt="Social Sigma Logo" class="loader-logo">
         <div class="loader-progress-bar">
           <div class="loader-progress-fill" id="loader-progress"></div>
         </div>
@@ -61,7 +61,7 @@
   <header class="site-header" id="site-header">
     <div class="nav-container">
       <a href="#" class="logo" id="nav-logo" aria-label="Social Sigma Logo">
-        <img src="assets/logo.jpg" alt="Social Sigma Logo" class="nav-logo-img">
+        <img src="assets/logo.svg" alt="Social Sigma Logo" class="nav-logo-img">
       </a>
       
       <nav class="nav-menu" id="nav-menu" role="navigation">
@@ -118,38 +118,107 @@
         </div>
       </div>
       
-      <!-- Interactive Phone Mockup with Skyrocketing graph -->
+      <!-- Interactive Dashboard Panels with Live Analytics & Meta Ads Manager Simulation -->
       <div class="hero-image-wrap reveal-item reveal-delay-2">
-        <div class="hero-phone-mockup" id="hero-mockup">
-          <div class="mockup-header">
-            <span class="mockup-logo">Sigma Analytics</span>
-            <span class="mockup-badge">Boosted</span>
+        <div class="hero-dashboard-container" id="hero-dashboard">
+          
+          <!-- Panel 1: Main Analytics Graph Panel -->
+          <div class="dashboard-panel panel-main" data-speed="1.2" id="hero-panel-main">
+            <div class="panel-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="panel-title">Sigma Real-time Analytics</span>
+              <span class="panel-status-live"><span class="pulse-dot"></span> Live</span>
+            </div>
+            <div class="panel-body">
+              <div class="main-chart-container">
+                <div class="chart-legend">
+                  <span><i class="fas fa-circle text-blue"></i> Paid Traffic</span>
+                  <span><i class="fas fa-circle text-lime"></i> Conversions</span>
+                </div>
+                <!-- Animated Line SVG Graph -->
+                <svg class="analytics-svg-chart" viewBox="0 0 500 200" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="glow-grad-blue" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#1877F2" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#1877F2" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="glow-grad-lime" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#c1ff72" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#c1ff72" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Blue Line (Traffic) -->
+                  <path class="chart-path-blue" d="M 0,160 Q 80,120 160,150 T 320,80 T 480,40" fill="none" stroke="#1877F2" stroke-width="3" />
+                  <path class="chart-area-blue" d="M 0,160 Q 80,120 160,150 T 320,80 T 480,40 L 480,200 L 0,200 Z" fill="url(#glow-grad-blue)" />
+                  
+                  <!-- Lime Line (Conversions) -->
+                  <path class="chart-path-lime" d="M 0,180 Q 70,160 140,110 T 280,140 T 480,25" fill="none" stroke="#c1ff72" stroke-width="4" />
+                  <path class="chart-area-lime" d="M 0,180 Q 70,160 140,110 T 280,140 T 480,25 L 480,200 L 0,200 Z" fill="url(#glow-grad-lime)" />
+                  
+                  <!-- Pulse Marker Dot -->
+                  <circle cx="480" cy="25" r="5" fill="#c1ff72" class="chart-marker-pulse" />
+                </svg>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="footer-stat">
+                <span class="stat-label">Active Users</span>
+                <span class="stat-value" id="dashboard-active-users">2,480</span>
+              </div>
+              <div class="footer-stat">
+                <span class="stat-label">Daily Reach</span>
+                <span class="stat-value" id="dashboard-daily-reach">452.8K</span>
+              </div>
+            </div>
           </div>
-          <div class="mockup-body">
-            <div class="mockup-rocket-graphic">
-              <i class="fas fa-rocket"></i>
+
+          <!-- Panel 2: Meta Ads Manager Campaign Panel (Overlapping Top Right) -->
+          <div class="dashboard-panel panel-ads" data-speed="1.8" id="hero-panel-ads">
+            <div class="panel-header">
+              <i class="fab fa-facebook text-blue"></i>
+              <span class="panel-title">Campaign: Scaling_ScaleUp</span>
+              <span class="campaign-badge-active">Active</span>
             </div>
-            <!-- Interactive rising chart bars -->
-            <div class="mockup-graph" id="mockup-graph">
-              <div class="graph-bar"></div>
-              <div class="graph-bar"></div>
-              <div class="graph-bar"></div>
-              <div class="graph-bar"></div>
-              <div class="graph-bar"></div>
-              <div class="graph-bar"></div>
-              <div class="graph-bar"></div>
+            <div class="panel-body">
+              <div class="ads-quick-metrics">
+                <div class="quick-metric">
+                  <span class="q-label">Amount Spent</span>
+                  <span class="q-value text-white" id="meta-spend">$12,482.40</span>
+                </div>
+                <div class="quick-metric">
+                  <span class="q-label">ROAS</span>
+                  <span class="q-value text-lime">5.82x</span>
+                </div>
+              </div>
+              <div class="ads-progress-meters">
+                <div class="meter-row">
+                  <div class="meter-labels">
+                    <span>CTR: <span class="text-lime">4.2%</span></span>
+                    <span>Impressions: <span id="meta-impressions">82,450</span></span>
+                  </div>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="mockup-footer">
-            <div class="mockup-metric">
-              <p class="mockup-metric-label">Avg Reach Lift</p>
-              <p class="mockup-metric-val">+320%</p>
+
+          <!-- Panel 3: Leads & ROI Float Badge (Overlapping Bottom Left) -->
+          <div class="dashboard-panel panel-badge" data-speed="0.8" id="hero-panel-badge">
+            <div class="badge-icon-wrap">
+              <i class="fas fa-arrow-trend-up text-lime"></i>
             </div>
-            <div class="mockup-metric">
-              <p class="mockup-metric-label">Ad Conversions</p>
-              <p class="mockup-metric-val">5.8x</p>
+            <div class="badge-details">
+              <span class="badge-label">Avg CPA Saved</span>
+              <span class="badge-value">-32.4%</span>
             </div>
           </div>
+
         </div>
       </div>
     </div>

@@ -121,17 +121,55 @@ function createFireParticle() {
 }
 
 function animateHeroGraph() {
-  const graph = document.getElementById('mockup-graph');
-  if (!graph) return;
-  const bars = graph.querySelectorAll('.graph-bar');
-  const finalHeights = [45, 60, 52, 75, 88, 92, 98];
-  
-  bars.forEach((bar, idx) => {
-    setTimeout(() => {
-      bar.classList.add('filled');
-      bar.style.height = `${finalHeights[idx]}%`;
-    }, idx * 120);
-  });
+  // Trigger real-time ticking metrics simulation
+  initDashboardTickers();
+}
+
+function initDashboardTickers() {
+  const usersEl = document.getElementById('dashboard-active-users');
+  const reachEl = document.getElementById('dashboard-daily-reach');
+  const spendEl = document.getElementById('meta-spend');
+  const impressionsEl = document.getElementById('meta-impressions');
+
+  // 1. Active Users (Fluctuates between 2450 and 2550)
+  if (usersEl) {
+    let users = 2480;
+    setInterval(() => {
+      const change = Math.floor(Math.random() * 15) - 7; // -7 to +7
+      users = Math.max(2100, Math.min(2800, users + change));
+      usersEl.textContent = users.toLocaleString();
+    }, 2000);
+  }
+
+  // 2. Daily Reach (Slowly increments from 452.8K)
+  if (reachEl) {
+    let reachVal = 452.8;
+    setInterval(() => {
+      const change = Math.random() * 0.3; // 0 to 0.3K
+      reachVal += change;
+      reachEl.textContent = `${reachVal.toFixed(1)}K`;
+    }, 3000);
+  }
+
+  // 3. Meta Ad Spent (Increments by cents every 800ms)
+  if (spendEl) {
+    let spentVal = 12482.40;
+    setInterval(() => {
+      const change = Math.random() * 0.4 + 0.1; // $0.10 to $0.50
+      spentVal += change;
+      spendEl.textContent = `$${spentVal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }, 800);
+  }
+
+  // 4. Meta Impressions (Increments by 2 to 9 every 800ms)
+  if (impressionsEl) {
+    let impressionsVal = 82450;
+    setInterval(() => {
+      const change = Math.floor(Math.random() * 8) + 2;
+      impressionsVal += change;
+      impressionsEl.textContent = impressionsVal.toLocaleString();
+    }, 800);
+  }
 }
 
 /* ==========================================================================
@@ -553,7 +591,7 @@ function initMouseParallax() {
   const hero = document.getElementById('hero');
   const blob1 = document.getElementById('blob-1');
   const blob2 = document.getElementById('blob-2');
-  const phone = document.getElementById('hero-mockup');
+  const dashboard = document.getElementById('hero-dashboard');
   
   if (!hero) return;
   
@@ -573,9 +611,11 @@ function initMouseParallax() {
       blob2.style.transform = `translate(${percentX * -30}px, ${percentY * -30}px)`;
     }
     
-    // Slight shift on phone mockup
-    if (phone) {
-      phone.style.transform = `translate(${percentX * 10}px, ${percentY * 10}px) rotate(${percentX * 1.5}deg)`;
+    // Tilt the glassmorphic dashboard container in 3D (3D parallax depth)
+    if (dashboard) {
+      const rotateX = percentY * -12; // tilt up/down (X axis rotation)
+      const rotateY = percentX * 12;  // tilt left/right (Y axis rotation)
+      dashboard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     }
   });
 
@@ -583,7 +623,9 @@ function initMouseParallax() {
   hero.addEventListener('mouseleave', () => {
     if (blob1) blob1.style.transform = 'translate(0px, 0px)';
     if (blob2) blob2.style.transform = 'translate(0px, 0px)';
-    if (phone) phone.style.transform = 'translate(0px, 0px) rotate(0deg)';
+    if (dashboard) {
+      dashboard.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    }
   });
 }
 
