@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Sigma | Gurgaon's Best Creative Digital Marketing Agency</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="SocialSigma® is a premier branding and digital marketing agency in Gurgaon. We specialize in performance marketing, social media strategies, SEO, web design, and influencer promotions to elevate your brand presence.">
+  <meta name="keywords" content="digital marketing agency, branding agency gurgaon, performance marketing, social media marketing, SEO optimization, website development, influencer marketing, social sigma">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Social Sigma | Gurgaon's Best Creative Digital Marketing Agency">
+  <meta property="og:description" content="Crafting future-ready brands through a perfect fusion of vision, creativity, and performance technology.">
+  <meta property="og:url" content="https://www.socialsigma.in/">
+  <meta property="og:type" content="website">
+  
+  <!-- Styling Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- --- Skyrocketing Rocket Intro Loader --- -->
+  <div id="rocket-loader" aria-hidden="true">
+    <div class="loader-stars"></div>
+    <div class="loader-container">
+      <div class="rocket-wrapper" id="rocket-wrapper">
+        <!-- Minimalist Rocket SVG -->
+        <svg class="rocket-svg" viewBox="0 0 54 110" xmlns="http://www.w3.org/2000/svg">
+          <!-- Rocket Body -->
+          <path d="M27,10 C15,35 12,65 12,85 L42,85 C42,65 39,35 27,10 Z" fill="#1877F2" />
+          <!-- Nose Cone -->
+          <path d="M27,10 C21,22 20,32 20,40 L34,40 C34,32 33,22 27,10 Z" fill="#c1ff72" />
+          <!-- Window -->
+          <circle cx="27" cy="55" r="5" fill="#0a0f1d" stroke="#ffffff" stroke-width="2"/>
+          <!-- Left Fin -->
+          <path d="M12,80 C2,90 2,100 2,100 C2,100 12,98 12,85 Z" fill="#c1ff72" />
+          <!-- Right Fin -->
+          <path d="M42,80 C52,90 52,100 52,100 C52,100 42,98 42,85 Z" fill="#c1ff72" />
+          <!-- Thruster -->
+          <rect x="23" y="85" width="8" height="6" fill="#64748b" rx="2"/>
+        </svg>
+        <!-- Thruster Flame -->
+        <div class="rocket-flame"></div>
+      </div>
+      <div class="loader-text-wrap">
+        <p class="loader-subtitle">Igniting Engine</p>
+        <img src="assets/logo.jpg" alt="Social Sigma Logo" class="loader-logo">
+        <div class="loader-progress-bar">
+          <div class="loader-progress-fill" id="loader-progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- Fixed Header & Navigation --- -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#" class="logo" id="nav-logo" aria-label="Social Sigma Logo">
+        <img src="assets/logo.jpg" alt="Social Sigma Logo" class="nav-logo-img">
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu" role="navigation">
+        <a href="#" class="nav-link active" id="link-home">Home</a>
+        <a href="#about" class="nav-link" id="link-about">About Us</a>
+        <a href="#services" class="nav-link" id="link-services">Services</a>
+        <a href="portfolio.html" class="nav-link" id="link-portfolio">Our Work | Portfolio</a>
+        <button class="btn-nav-enquire" id="btn-header-enquire" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+          Enquire Now <i class="fas5 fa-arrow-right"></i>
+        </button>
+      </nav>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- Hero Section --- -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-blobs">
+      <div class="blob blob-blue" id="blob-1"></div>
+      <div class="blob blob-lime" id="blob-2"></div>
+    </div>
+    
+    <div class="hero-container">
+      <div class="hero-content reveal-item">
+        <div class="hero-tag">
+          <span></span> Gurgaon's Best Creative Marketing Agency
+        </div>
+        <h1 class="hero-title">
+          Dikhega tabhi toh<br>
+          <span class="lime-glow">Bikega.</span>
+        </h1>
+        <p class="hero-desc">
+          We craft future-ready brands through a perfect fusion of creative content, performance marketing, and data-driven scaling strategies.
+        </p>
+        <div class="hero-ctas">
+          <button class="btn-primary" id="hero-cta-get-started" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            Get Started <i class="fas fa-rocket"></i>
+          </button>
+          <button class="btn-secondary" id="hero-cta-view-work" onclick="window.location.href='portfolio.html'">
+            View Work <i class="fas fa-location-arrow"></i>
+          </button>
+        </div>
+        
+        <div class="hero-socials">
+          <span class="hero-social-label">Follow Us</span>
+          <div class="hero-social-links">
+            <a href="https://www.facebook.com/socialsigma.in" target="_blank" class="hero-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/socialsigma.in/" target="_blank" class="hero-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.behance.net/99shrwt" target="_blank" class="hero-social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Phone Mockup with Skyrocketing graph -->
+      <div class="hero-image-wrap reveal-item reveal-delay-2">
+        <div class="hero-phone-mockup" id="hero-mockup">
+          <div class="mockup-header">
+            <span class="mockup-logo">Sigma Analytics</span>
+            <span class="mockup-badge">Boosted</span>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-rocket-graphic">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <!-- Interactive rising chart bars -->
+            <div class="mockup-graph" id="mockup-graph">
+              <div class="graph-bar"></div>
+              <div class="graph-bar"></div>
+              <div class="graph-bar"></div>
+              <div class="graph-bar"></div>
+              <div class="graph-bar"></div>
+              <div class="graph-bar"></div>
+              <div class="graph-bar"></div>
+            </div>
+          </div>
+          <div class="mockup-footer">
+            <div class="mockup-metric">
+              <p class="mockup-metric-label">Avg Reach Lift</p>
+              <p class="mockup-metric-val">+320%</p>
+            </div>
+            <div class="mockup-metric">
+              <p class="mockup-metric-label">Ad Conversions</p>
+              <p class="mockup-metric-val">5.8x</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Partners Infinite Logo Marquee --- -->
+  <div class="partners-marquee" id="partners-marquee">
+    <div class="marquee-track" id="marquee-track">
+      <!-- Logos duplicated for infinite loop scroll -->
+      <div class="partner-logo"><i class="fab fa-google"></i> Google Ads</div>
+      <div class="partner-logo"><i class="fab fa-facebook"></i> Meta Partner</div>
+      <div class="partner-logo"><i class="fab fa-linkedin"></i> LinkedIn</div>
+      <div class="partner-logo"><i class="fab fa-wordpress"></i> WordPress</div>
+      <div class="partner-logo"><i class="fab fa-hubspot"></i> HubSpot</div>
+      <div class="partner-logo"><i class="fab fa-microsoft"></i> Bing Ads</div>
+      <div class="partner-logo"><i class="fas fa-chart-line"></i> Analytics</div>
+      
+      <!-- Duplicate Logos -->
+      <div class="partner-logo"><i class="fab fa-google"></i> Google Ads</div>
+      <div class="partner-logo"><i class="fab fa-facebook"></i> Meta Partner</div>
+      <div class="partner-logo"><i class="fab fa-linkedin"></i> LinkedIn</div>
+      <div class="partner-logo"><i class="fab fa-wordpress"></i> WordPress</div>
+      <div class="partner-logo"><i class="fab fa-hubspot"></i> HubSpot</div>
+      <div class="partner-logo"><i class="fab fa-microsoft"></i> Bing Ads</div>
+      <div class="partner-logo"><i class="fas fa-chart-line"></i> Analytics</div>
+    </div>
+  </div>
+
+  <!-- --- About Section ("Marketing Is Our Jam") --- -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal-item">
+          <span class="section-tag">About Social Sigma</span>
+          <h3>Marketing Is Our Jam & We Spread It Thick</h3>
+          <p class="about-highlight">Powerful Digital Marketing Agency Solutions, Spread Wide!</p>
+          <div class="about-text">
+            <p>
+              SocialSigma® is recognized as the best branding and digital marketing agency, specializing in crafting future-ready brands through a perfect fusion of vision, creativity, and technology.
+            </p>
+            <p>
+              Our team collaborates with visionary leaders and innovative companies to deliver impactful brand strategies and cutting-edge digital marketing services that drive growth and elevate market presence.
+            </p>
+            <p>
+              <strong>Trends, Technology, and Tactics are never stagnant and neither are we.</strong>
+            </p>
+          </div>
+          <div class="about-ctas">
+            <button class="btn-primary" id="btn-about-enquire" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Enquire Now</button>
+          </div>
+        </div>
+        
+        <!-- Interactive video block -->
+        <div class="about-media reveal-item reveal-delay-2">
+          <video id="about-video" loop muted autoplay playsinline>
+            <source src="https://www.socialsigma.in/wp-content/uploads/2026/03/marketing-is-our-jam.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="about-media-overlay">
+            <span class="about-media-tag">Our Culture</span>
+            <p class="about-media-title">Spread it Thick & Direct</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Capabilities Section (Interactive Dynamic Grid) --- -->
+  <section class="section-padding section-dark" id="services">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Creative Operations That Scale</h2>
+        <p class="section-desc">We structure campaigns into structured frameworks to align strategy with ROI goals.</p>
+      </div>
+      
+      <!-- Loaded dynamically via js/data/services.js + js/app.js -->
+      <div class="capabilities-grid" id="capabilities-mount">
+        <!-- Render fallback layout for SEO indexing -->
+        <div class="capability-row">
+          <div class="capability-num">01</div>
+          <div class="capability-title">Performance Marketing</div>
+          <div class="capability-summary">
+            <p class="capability-desc">Data-driven campaigns focused on boosting conversions and accelerating your business growth.</p>
+            <div class="capability-tags">
+              <span class="capability-tag">Paid Advertising</span>
+              <span class="capability-tag">Lead Generation</span>
+              <span class="capability-tag">Sales Funnel</span>
+            </div>
+          </div>
+          <div class="capability-cta"><span class="btn-arrow-glow"><i class="fas fa-arrow-right"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Specialized Services Section --- -->
+  <section class="section-padding" id="specialized-services">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Specialized Operations</span>
+        <h2 class="section-title">What Additional...?</h2>
+        <p class="section-desc">Focused creative solutions built to capture interest and drive action.</p>
+      </div>
+      
+      <!-- Loaded dynamically via js/data/services.js + js/app.js -->
+      <div class="specialized-grid" id="specialized-mount"></div>
+    </div>
+  </section>
+
+  <!-- --- Metrics / Stats Section --- -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal-item">
+          <p class="stat-num" id="count-clients" data-target="8">0</p>
+          <h4 class="stat-title">Clients Elevated</h4>
+          <p class="stat-desc">Trusted us to build their presence</p>
+        </div>
+        <div class="stat-item reveal-item reveal-delay-1">
+          <p class="stat-num" id="count-comments" data-target="7">0</p>
+          <h4 class="stat-title">Interactions Generated</h4>
+          <p class="stat-desc">Real engagement, not just ghost likes</p>
+        </div>
+        <div class="stat-item reveal-item reveal-delay-2">
+          <p class="stat-num" id="count-lift" data-target="320">0</p>
+          <h4 class="stat-title">Avg Viewers Lift</h4>
+          <p class="stat-desc">Measurable compound organic growth</p>
+        </div>
+      </div>
+      
+      <!-- Bottom banners of secondary metrics -->
+      <div class="stats-banner">
+        <div class="stat-banner-item reveal-item">
+          <div class="stat-banner-icon"><i class="fas fa-photo-video"></i></div>
+          <div class="stat-banner-content">
+            <h4 id="banner-formats">+10</h4>
+            <p>Content Formats Delivered</p>
+          </div>
+        </div>
+        <div class="stat-banner-item reveal-item reveal-delay-1">
+          <div class="stat-banner-icon"><i class="fas fa-pencil-alt"></i></div>
+          <div class="stat-banner-content">
+            <h4 id="banner-posts">+400</h4>
+            <p>Social Posts Published</p>
+          </div>
+        </div>
+        <div class="stat-banner-item reveal-item reveal-delay-2">
+          <div class="stat-banner-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-banner-content">
+            <h4 id="banner-reach">+12M</h4>
+            <p>Accounts Reached Overall</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Interactive Work Portfolio --- -->
+  <section class="section-padding" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Work Profile</span>
+        <h2 class="section-title">Recent Brand Collaborations</h2>
+        <p class="section-desc">Clear metrics and transparent reporting that demonstrate the effectiveness of our content.</p>
+      </div>
+      
+      <div class="portfolio-slider-container reveal-item">
+        <div class="slider-wrapper">
+          <div class="portfolio-track" id="portfolio-mount">
+            <!-- Dynamic elements loaded via js/data/portfolio.js -->
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="btn-slider" id="btn-portfolio-prev" aria-label="Previous Project"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="portfolio-dots"></div>
+          <button class="btn-slider" id="btn-portfolio-next" aria-label="Next Project"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Client Reviews Testimonials --- -->
+  <section class="section-padding testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Words of Thanks !! 🤩</h2>
+        <p class="section-desc">Feedback from key founders and managers we collaborate with.</p>
+      </div>
+      
+      <div class="portfolio-slider-container reveal-item">
+        <div class="slider-wrapper">
+          <div class="testimonials-track" id="testimonials-mount">
+            <!-- Testimonials loaded via js/data/testimonials.js -->
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="btn-slider" id="btn-test-prev" aria-label="Previous Review"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="test-dots"></div>
+          <button class="btn-slider" id="btn-test-next" aria-label="Next Review"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Contact Form & Footer Section --- -->
+  <footer class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-item">
+          <span class="contact-tag">Get in Touch</span>
+          <h2 class="contact-heading">Let’s Build Something Powerful</h2>
+          <p class="contact-desc">Ready to launch or scale your brand presence? Send us an inquiry, and our creative analysts will map out a customized action plan for you.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <label>Email Address</label>
+                <a href="mailto:hello@socialsigma.in" id="contact-email">hello@socialsigma.in</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-text">
+                <label>Phone Enquiries</label>
+                <a href="tel:+917900033017" id="contact-phone-1">(+91) 790-003-3017</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-text">
+                <label>Secondary Phone</label>
+                <a href="tel:+918171275577" id="contact-phone-2">(+91) 817-127-5577</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-socials">
+            <a href="https://www.facebook.com/socialsigma.in" target="_blank" class="social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/socialsigma.in/" target="_blank" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.behance.net/99shrwt" target="_blank" class="social-circle" aria-label="Behance"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Enquiry Form -->
+        <div class="contact-form-wrap reveal-item reveal-delay-2">
+          <h3>Send a Quick Enquiry</h3>
+          <form id="enquiry-form">
+            <div class="form-group">
+              <input type="text" class="form-input" id="form-name" placeholder=" " required>
+              <label for="form-name">Your Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="form-email" placeholder=" " required>
+              <label for="form-email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-input" id="form-phone" placeholder=" " required>
+              <label for="form-phone">Phone Number</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" id="form-message" placeholder=" " required></textarea>
+              <label for="form-message">How can we help your brand?</label>
+            </div>
+            <button type="submit" class="btn-form-submit" id="btn-submit-enquiry">
+              Launch Request <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Social Sigma. All rights reserved. Created with absolute visual and motion excellence.</p>
+        <p>Gurgaon, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- Lightbox Portfolio Modal --- -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <button class="lightbox-close" id="btn-lightbox-close" aria-label="Close Gallery">&times;</button>
+    <div class="lightbox-container">
+      <div class="lightbox-slider">
+        <!-- Rendered images will be inserted dynamically by JS -->
+      </div>
+      <div class="lightbox-nav">
+        <button class="btn-lightbox-nav" id="btn-lightbox-prev" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn-lightbox-nav" id="btn-lightbox-next" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="lightbox-thumbs" id="lightbox-thumbs">
+        <!-- Thumbnail strips -->
+      </div>
+    </div>
+  </div>
+
+  <!-- --- Load scripts --- -->
+  <!-- Loaded data modules first -->
+  <script src="js/data/services.js"></script>
+  <script src="js/data/portfolio.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  
+  <!-- Main application script -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>

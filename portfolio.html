@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | Portfolio – Social Sigma</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore Social Sigma's portfolio of successful digital campaigns. See our creatives and verified Meta Ads Manager results for brands in hospitality, fashion, design, and fitness.">
+  <meta name="keywords" content="social sigma work, portfolio digital marketing, meta ads manager screenshot, case studies, instagram grid portfolio">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Styling Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- --- Fixed Header & Navigation --- -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="nav-logo" aria-label="Social Sigma Logo">
+        <img src="assets/logo.jpg" alt="Social Sigma Logo" class="nav-logo-img">
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu" role="navigation">
+        <a href="index.html" class="nav-link" id="link-home">Home</a>
+        <a href="index.html#about" class="nav-link" id="link-about">About Us</a>
+        <a href="index.html#services" class="nav-link" id="link-services">Services</a>
+        <a href="portfolio.html" class="nav-link active" id="link-portfolio">Our Work | Portfolio</a>
+        <button class="btn-nav-enquire" id="btn-header-enquire" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+          Enquire Now <i class="fas fa-arrow-right"></i>
+        </button>
+      </nav>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- Portfolio Intro Hero Section --- -->
+  <section class="portfolio-hero">
+    <div class="container">
+      <span class="section-tag">Proof of Performance</span>
+      <h1 class="section-title">Worked Profiles & Case Studies</h1>
+      <p class="section-desc">A feed of the creative assets we design and the verified advertising numbers we scale.</p>
+    </div>
+  </section>
+
+  <!-- --- Category Filter pills --- -->
+  <div class="container">
+    <div class="portfolio-filters" id="filters-container">
+      <button class="filter-btn active" data-filter="all">All Collaborations</button>
+      <button class="filter-btn" data-filter="hospitality">Resort & Leisure</button>
+      <button class="filter-btn" data-filter="fashion">Fashion Wholesalers</button>
+      <button class="filter-btn" data-filter="interior">Interior Design</button>
+      <button class="filter-btn" data-filter="activewear">Activewear DTC</button>
+    </div>
+  </div>
+
+  <!-- --- Showcase Instagram Cards Section --- -->
+  <section class="section-padding" style="padding-top: 0;">
+    <div class="container">
+      <div class="showcase-grid" id="showcase-mount">
+        <!-- Rendered dynamically by js/app.js using window.portfolioData -->
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Contact Form & Footer Section --- -->
+  <footer class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-item">
+          <span class="contact-tag">Get in Touch</span>
+          <h2 class="contact-heading">Let’s Build Something Powerful</h2>
+          <p class="contact-desc">Ready to launch or scale your brand presence? Send us an inquiry, and our creative analysts will map out a customized action plan for you.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <label>Email Address</label>
+                <a href="mailto:hello@socialsigma.in" id="contact-email">hello@socialsigma.in</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-text">
+                <label>Phone Enquiries</label>
+                <a href="tel:+917900033017" id="contact-phone-1">(+91) 790-003-3017</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-text">
+                <label>Secondary Phone</label>
+                <a href="tel:+918171275577" id="contact-phone-2">(+91) 817-127-5577</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-socials">
+            <a href="https://www.facebook.com/socialsigma.in" target="_blank" class="social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/socialsigma.in/" target="_blank" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.behance.net/99shrwt" target="_blank" class="social-circle" aria-label="Behance"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Enquiry Form -->
+        <div class="contact-form-wrap reveal-item reveal-delay-2">
+          <h3>Send a Quick Enquiry</h3>
+          <form id="enquiry-form">
+            <div class="form-group">
+              <input type="text" class="form-input" id="form-name" placeholder=" " required>
+              <label for="form-name">Your Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="form-email" placeholder=" " required>
+              <label for="form-email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-input" id="form-phone" placeholder=" " required>
+              <label for="form-phone">Phone Number</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" id="form-message" placeholder=" " required></textarea>
+              <label for="form-message">How can we help your brand?</label>
+            </div>
+            <button type="submit" class="btn-form-submit" id="btn-submit-enquiry">
+              Launch Request <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Social Sigma. All rights reserved. Created with absolute visual and motion excellence.</p>
+        <p>Gurgaon, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- Lightbox Portfolio Modal --- -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <button class="lightbox-close" id="btn-lightbox-close" aria-label="Close Gallery">&times;</button>
+    <div class="lightbox-container">
+      <div class="lightbox-slider">
+        <!-- Rendered images will be inserted dynamically by JS -->
+      </div>
+      <div class="lightbox-nav">
+        <button class="btn-lightbox-nav" id="btn-lightbox-prev" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn-lightbox-nav" id="btn-lightbox-next" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="lightbox-thumbs" id="lightbox-thumbs">
+        <!-- Thumbnail strips -->
+      </div>
+    </div>
+  </div>
+
+  <!-- --- Load scripts --- -->
+  <!-- Loaded data modules first -->
+  <script src="js/data/portfolio.js"></script>
+  
+  <!-- Main application script -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
