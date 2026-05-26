@@ -470,7 +470,7 @@ header.site-header.scrolled {
   letter-spacing: -0.04em;
   line-height: 1.05;
   margin-bottom: 1.5rem;
-  color: var(--dark);
+  color: var(--white);
 }
 
 .hero-title span.lime-glow {
@@ -520,8 +520,8 @@ header.site-header.scrolled {
   font-size: 1rem;
   padding: 1.1rem 2.2rem;
   background: transparent;
-  color: var(--dark);
-  border: 2px solid var(--dark);
+  color: var(--white);
+  border: 2px solid var(--white);
   border-radius: var(--border-radius-full);
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -531,7 +531,7 @@ header.site-header.scrolled {
 }
 
 .btn-secondary:hover {
-  background: rgba(10, 15, 29, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
 }
 
