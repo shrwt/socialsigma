@@ -1,13 +1,56 @@
+/**
+ * PORTFOLIO DATA CONFIGURATION
+ * 
+ * To add a new onboarded project to the portfolio:
+ * 1. Create a new project object in the array below.
+ * 2. PLACE IT AT THE VERY FIRST POSITION (index 0) of the `portfolioData` array.
+ * 3. The portfolio page will automatically load and display it in the first place,
+ *    retaining the exact same premium Instagram-style grid design and styles.
+ * 
+ * Project Schema:
+ * {
+ *   id: "unique-kebab-case-id",
+ *   title: "Project Title",
+ *   subtitle: "Brief description of location or type",
+ *   category: "hospitality" | "fashion" | "interior" | "activewear",
+ *   instagramHandle: "@username",
+ *   instagramLink: "https://www.instagram.com/username/",
+ *   avatar: "URL to circular logo image",
+ *   cover: "URL to cover image shown in index.html carousel",
+ *   caption: "Text description of what was achieved",
+ *   likesCount: 1234,
+ *   adsPerformance: {
+ *     spent: "₹1,85,000",
+ *     roas: "4.5x",
+ *     conversions: "342 Bookings",
+ *     ctr: "2.34%",
+ *     costPerResult: "₹540 / Booking",
+ *     impressions: "1.2M"
+ *   },
+ *   images: [
+ *     "URL_to_image_1", // First image (top-left of 3x3 Instagram grid)
+ *     "URL_to_image_2",
+ *     "URL_to_image_3",
+ *     "URL_to_image_4",
+ *     "URL_to_image_5",
+ *     "URL_to_image_6",
+ *     "URL_to_image_7",
+ *     "URL_to_image_8",
+ *     "URL_to_image_9"  // Exactly 9 images are recommended for a complete 3x3 grid
+ *   ]
+ * }
+ */
 const portfolioData = [
   {
     id: "royal-venetian",
     title: "The Royal Venetian",
     subtitle: "Grand Resort on NH44 Highway, Panipat",
     category: "hospitality",
-    instagramHandle: "@theroyalvenetian",
-    instagramLink: "https://www.instagram.com/theroyalvenetian/",
+    instagramHandle: "@theroyalvenetian1",
+    instagramLink: "https://www.instagram.com/theroyalvenetian1/",
+    websiteLink: "https://theroyalvenetian.in/",
     avatar: "https://www.socialsigma.in/wp-content/uploads/2026/03/1-TRV-Logo-Black-Main-Lion-bg-white-scaled.jpg",
-    cover: "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Mar17-bar-promotion-image.png",
+    cover: "assets/royal-venetian/media__1779771232188.jpg",
     caption: "Curating luxury banquets and high-production corporate hospitality shoots. We engineered a complete digital funnel that keeps their venues fully booked for regional business summits and high-profile events.",
     likesCount: 1452,
     adsPerformance: {
@@ -21,16 +64,13 @@ const portfolioData = [
       progressCtr: 68,
       progressRoas: 75
     },
+    localFolder: "assets/royal-venetian/",
     images: [
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Mar17-bar-promotion-image.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Feb01-bar-promotoion-drink-photos-1.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Feb19-maharana-pratap-jayanti.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Mar03-Holi-celebration-post-1-1.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Mar19-1-navratri-post-1.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Feb01-bar-promotoion-drink-photos-3.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Feb12-bar-promotion-blue-lagoon-drinks-from-phurr.ind-1.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Jan11-tipsy-bar-promo-3.png",
-      "https://www.socialsigma.in/wp-content/uploads/2026/03/2026-Mar07-bar-promotion-1.png"
+      "assets/royal-venetian/media__1779771231440.jpg",
+      "assets/royal-venetian/media__1779771231831.jpg",
+      "assets/royal-venetian/media__1779771231942.jpg",
+      "assets/royal-venetian/media__1779771231981.jpg",
+      "assets/royal-venetian/media__1779771232188.jpg"
     ]
   },
   {
@@ -40,6 +80,7 @@ const portfolioData = [
     category: "fashion",
     instagramHandle: "@markjillion_clothing",
     instagramLink: "https://www.instagram.com/markjillion_clothing/",
+    websiteLink: "https://markjillion.com/",
     avatar: "https://www.socialsigma.in/wp-content/uploads/2026/03/6206295114037006216.jpg",
     cover: "https://www.socialsigma.in/wp-content/uploads/2026/03/SnapInsta.to_623256739_17985950222939895_3942930761201315134_n.jpg.jpeg",
     caption: "Crafting visual identities for high-volume fashion wholesale. Our creative ad hooks scaled Mark Jillion's order volume, maintaining a steady ROI even during the retail off-season.",
@@ -74,6 +115,7 @@ const portfolioData = [
     category: "interior",
     instagramHandle: "@key4you_interior",
     instagramLink: "https://www.instagram.com/key4you_interior/",
+    websiteLink: "https://key4you.in/",
     avatar: "https://www.socialsigma.in/wp-content/uploads/2026/03/6206295114037006217.jpg",
     cover: "https://www.socialsigma.in/wp-content/uploads/2026/03/SnapInsta.to_476315238_17963679968846337_6499223105099981460_n.jpg.jpeg",
     caption: "Elevating luxury interior portfolios. We shifted their lead flow from price-sensitive requests to premium 'dream home' commissions by targeting high-net-worth audiences with immersive video formats.",
@@ -108,6 +150,7 @@ const portfolioData = [
     category: "activewear",
     instagramHandle: "@blackwizardsports",
     instagramLink: "https://www.instagram.com/blackwizardsports/",
+    websiteLink: "https://blackwizardsports.com/",
     avatar: "https://www.socialsigma.in/wp-content/uploads/2026/05/logo-black-bg-white-blackwizard.jpg",
     cover: "https://www.socialsigma.in/wp-content/uploads/2026/05/2026-May07-tshirt-promo.webp",
     caption: "Scaling athletic apparel direct-to-consumer presence. Through high-energy Reels and active wear lifestyle promos, we grew their digital footprint and scaled Meta advertising campaigns.",

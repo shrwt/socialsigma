@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initIntersectionObservers();
   initLightbox();
-  initFormHandler();
 });
 
 /* ==========================================================================
@@ -271,22 +270,34 @@ function renderPortfolio() {
   const mount = document.getElementById('portfolio-mount');
   if (!mount || !window.portfolioData) return;
   
-  mount.innerHTML = window.portfolioData.map(p => `
-    <div class="portfolio-card" data-id="${p.id}">
-      <div class="portfolio-img-wrap">
-        <img src="${p.cover}" alt="${p.title}" loading="lazy">
-        <div class="portfolio-img-overlay">
-          <div class="btn-view-gallery"><i class="fas fa-search-plus"></i></div>
-        </div>
-      </div>
-      <div class="portfolio-info">
+  mount.innerHTML = window.portfolioData.map((p, idx) => {
+    return `
+      <div class="project-card reveal-item revealed" data-id="${p.id}" data-brand="${p.id}">
         <div>
-          <h3>${p.title}</h3>
-          <p>${p.subtitle}</p>
+          <!-- Header -->
+          <div class="project-card-header">
+            <div class="project-card-logo-wrap">
+              <img src="${p.avatar}" alt="${p.title} Logo" class="project-card-logo" onerror="this.src='assets/logo-icon.png'">
+            </div>
+            <div class="project-card-info">
+              <h3 class="project-card-title">${p.title}</h3>
+              <span class="project-card-tag">${p.category}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="project-card-actions">
+          <a href="${p.instagramLink}" target="_blank" class="project-btn project-btn-insta" aria-label="Visit Instagram Profile">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="${p.websiteLink}" target="_blank" class="project-btn project-btn-web" aria-label="Visit Live Website">
+            <i class="fas fa-globe"></i> Website
+          </a>
         </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function renderTestimonials() {
@@ -465,7 +476,7 @@ function initSliders() {
     'btn-portfolio-prev', 
     'btn-portfolio-next', 
     'portfolio-dots', 
-    '.portfolio-card'
+    '.project-card'
   );
 
   // 2. Initialize Testimonials Carousel
@@ -492,20 +503,45 @@ function initLightbox() {
   let currentProjImages = [];
   let currentImgIdx = 0;
 
-  // Mount click triggers for portfolio card clicks
-  document.getElementById('portfolio-mount').addEventListener('click', (e) => {
-    const card = e.target.closest('.portfolio-card');
-    if (!card) return;
-    
-    const projId = card.getAttribute('data-id');
-    const proj = window.portfolioData.find(p => p.id === projId);
-    
-    if (proj && proj.images && proj.images.length > 0) {
-      currentProjImages = proj.images;
-      currentImgIdx = 0;
-      openLightbox();
-    }
-  });
+  // Mount click triggers for portfolio card clicks (homepage carousel)
+  const portfolioMount = document.getElementById('portfolio-mount');
+  if (portfolioMount) {
+    portfolioMount.addEventListener('click', (e) => {
+      const card = e.target.closest('.portfolio-card');
+      if (!card) return;
+      
+      const projId = card.getAttribute('data-id');
+      const proj = window.portfolioData.find(p => p.id === projId);
+      
+      if (proj && proj.images && proj.images.length > 0) {
+        currentProjImages = proj.images;
+        currentImgIdx = 0;
+        openLightbox();
+      }
+    });
+  }
+
+  // Mount click triggers for portfolio page grid item clicks
+  const showcaseMount = document.getElementById('showcase-mount');
+  if (showcaseMount) {
+    showcaseMount.addEventListener('click', (e) => {
+      const gridItem = e.target.closest('.insta-grid-item');
+      if (!gridItem) return;
+      
+      const card = gridItem.closest('.insta-card');
+      if (!card) return;
+      
+      const projId = card.getAttribute('data-id');
+      const proj = window.portfolioData.find(p => p.id === projId);
+      
+      if (proj && proj.images && proj.images.length > 0) {
+        const indexAttr = gridItem.getAttribute('data-index');
+        currentProjImages = proj.images;
+        currentImgIdx = parseInt(indexAttr, 10) || 0;
+        openLightbox();
+      }
+    });
+  }
 
   function openLightbox() {
     modal.classList.add('active');
@@ -629,33 +665,31 @@ function initMouseParallax() {
   });
 }
 
-/* ==========================================================================
-   8. ENQUIRY FORM SUBMITTER
-   ========================================================================== */
-function initFormHandler() {
-  const form = document.getElementById('enquiry-form');
-  const submitBtn = document.getElementById('btn-submit-enquiry');
-  
-  if (!form) return;
-  
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Visual feedback
-    submitBtn.innerHTML = 'Sending Request... <i class="fas fa-spinner fa-spin"></i>';
-    submitBtn.disabled = true;
-    
-    // Mock API delay
-    setTimeout(() => {
-      // Alert with styled notification
-      alert(`Thank you, ${document.getElementById('form-name').value}! Your brand boost enquiry has been launched successfully. Our creative analyst will connect with you within 2 hours.`);
-      
-      // Reset Form
-      form.reset();
-      submitBtn.innerHTML = 'Launch Request <i class="fas fa-paper-plane"></i>';
-      submitBtn.disabled = false;
-    }, 1500);
-  });
+
+function getSparklinePath(id) {
+  switch (id) {
+    case 'royal-venetian':
+      return {
+        line: "M 0 35 Q 50 10 100 30 T 200 5 T 300 25 T 400 2",
+        area: "M 0 35 Q 50 10 100 30 T 200 5 T 300 25 T 400 2 L 400 40 L 0 40 Z"
+      };
+    case 'mark-jillion':
+      return {
+        line: "M 0 38 Q 60 15 120 32 T 240 8 T 360 20 T 400 5",
+        area: "M 0 38 Q 60 15 120 32 T 240 8 T 360 20 T 400 5 L 400 40 L 0 40 Z"
+      };
+    case 'key4you':
+      return {
+        line: "M 0 30 Q 45 5 90 25 T 180 2 T 270 18 T 400 1",
+        area: "M 0 30 Q 45 5 90 25 T 180 2 T 270 18 T 400 1 L 400 40 L 0 40 Z"
+      };
+    case 'black-wizard':
+    default:
+      return {
+        line: "M 0 32 Q 55 12 110 28 T 220 4 T 330 15 T 400 3",
+        area: "M 0 32 Q 55 12 110 28 T 220 4 T 330 15 T 400 3 L 400 40 L 0 40 Z"
+      };
+  }
 }
 
 /* ==========================================================================
@@ -665,124 +699,83 @@ function renderShowcase() {
   const mount = document.getElementById('showcase-mount');
   if (!mount || !window.portfolioData) return;
   
-  mount.innerHTML = window.portfolioData.map(p => {
-    // Generate slide list
-    const slidesHtml = p.images.map(img => `
-      <div class="insta-slide">
-        <img src="${img}" alt="${p.title} creative asset" loading="lazy">
-      </div>
-    `).join('');
+  // Transform the container into our redesigned grid
+  mount.className = 'showcase-grid-redesigned';
+  
+  mount.innerHTML = window.portfolioData.map((p, idx) => {
+    const animationDelay = `${idx * 0.12}s`;
+    const spark = getSparklinePath(p.id);
     
-    // Generate dot Indicators
-    const dotsHtml = p.images.map((_, idx) => `
-      <div class="insta-slider-dot ${idx === 0 ? 'active' : ''}"></div>
-    `).join('');
-
     return `
-      <div class="insta-card reveal-item revealed" data-category="${p.category}" data-id="${p.id}">
-        <!-- Header -->
-        <div class="insta-header">
-          <div class="insta-profile">
-            <div class="insta-avatar">
-              <img src="${p.avatar}" alt="${p.title} profile avatar">
+      <div class="project-card reveal-item revealed" data-category="${p.category}" data-id="${p.id}" data-brand="${p.id}" style="animation-delay: ${animationDelay};">
+        <div>
+          <!-- Header -->
+          <div class="project-card-header">
+            <div class="project-card-logo-wrap">
+              <img src="${p.avatar}" alt="${p.title} Logo" class="project-card-logo" onerror="this.src='assets/logo-icon.png'">
             </div>
-            <div class="insta-meta">
-              <h4>${p.title} <i class="fas fa-check-circle" title="Verified Brand Collaboration"></i></h4>
-              <p>${p.subtitle}</p>
+            <div class="project-card-info">
+              <h3 class="project-card-title">${p.title}</h3>
+              <span class="project-card-tag">${p.category}</span>
             </div>
           </div>
-          <a href="${p.instagramLink}" target="_blank" class="insta-follow-btn" aria-label="Visit Instagram page">
-            <i class="fab fa-instagram"></i> Follow
-          </a>
-        </div>
-
-        <!-- Mode Selector Tabs -->
-        <div class="insta-tabs">
-          <button class="tab-btn active" data-tab="creatives"><i class="far fa-image"></i> Content Creatives</button>
-          <button class="tab-btn" data-tab="ads"><i class="fas fa-chart-line"></i> Meta Ads Manager</button>
-        </div>
-
-        <!-- Contents Wrap -->
-        <div class="insta-content-panels">
           
-          <!-- View 1: Slideshow Creatives -->
-          <div class="panel-view panel-creatives active">
-            <div class="insta-body">
-              <div class="insta-slides">${slidesHtml}</div>
-              
-              <!-- Navigation Controls -->
-              <button class="insta-slider-btn insta-slider-btn-prev" aria-label="Prev Slide"><i class="fas fa-chevron-left"></i></button>
-              <button class="insta-slider-btn insta-slider-btn-next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-              
-              <div class="insta-slider-dots">${dotsHtml}</div>
+          <!-- Embedded Ads Manager Dashboard -->
+          <div class="project-card-ads">
+            <div class="project-card-ads-header">
+              <span><i class="fab fa-facebook-square"></i> Meta Ads Manager</span>
+              <span class="project-card-ads-status-active">Active</span>
             </div>
-          </div>
-
-          <!-- View 2: Meta Ads Mockup Dashboard -->
-          <div class="panel-view panel-ads">
-            <div class="ads-performance-panel">
-              <div class="ads-panel-header">
-                <i class="fab fa-facebook-square"></i> Meta Ads Manager Campaign Live
+            
+            <div class="project-card-metrics">
+              <div class="project-card-metric">
+                <span class="project-card-metric-label">Spent</span>
+                <span class="project-card-metric-val">${p.adsPerformance.spent}</span>
               </div>
-              
-              <div class="ads-metrics-grid">
-                <div class="ads-metric-card">
-                  <span class="ads-metric-label">Amount Spent</span>
-                  <span class="ads-metric-val">${p.adsPerformance.spent}</span>
-                </div>
-                <div class="ads-metric-card lime-highlight">
-                  <span class="ads-metric-label">ROAS (Return on Ad Spend)</span>
-                  <span class="ads-metric-val">${p.adsPerformance.roas}</span>
-                </div>
-                <div class="ads-metric-card">
-                  <span class="ads-metric-label">Conversions (Results)</span>
-                  <span class="ads-metric-val">${p.adsPerformance.conversions}</span>
-                </div>
-                <div class="ads-metric-card highlight">
-                  <span class="ads-metric-label">Cost Per Result</span>
-                  <span class="ads-metric-val">${p.adsPerformance.costPerResult}</span>
-                </div>
+              <div class="project-card-metric highlight-roas">
+                <span class="project-card-metric-label">ROAS</span>
+                <span class="project-card-metric-val">${p.adsPerformance.roas}</span>
               </div>
-
-              <!-- Interactive Sparkline Chart -->
-              <div class="ads-chart-wrap">
-                <span class="ads-chart-title">Campaign Growth Trend (CTR & Conversions)</span>
-                <svg class="ads-sparkline" viewBox="0 0 400 60">
-                  <defs>
-                    <linearGradient id="chart-gradient-${p.id}" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#1877F2" stop-opacity="0.3"/>
-                      <stop offset="100%" stop-color="#1877F2" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M 0 50 Q 50 15 100 40 T 200 10 T 300 35 T 400 5" fill="none"></path>
-                  <path class="ads-sparkline-area" d="M 0 50 Q 50 15 100 40 T 200 10 T 300 35 T 400 5 L 400 60 L 0 60 Z" fill="url(#chart-gradient-${p.id})"></path>
-                </svg>
+              <div class="project-card-metric highlight-conv">
+                <span class="project-card-metric-label">Conversions</span>
+                <span class="project-card-metric-val">${p.adsPerformance.conversions}</span>
               </div>
-
-              <div class="ads-status-footer">
-                <div class="ads-status-active">Active Campaign</div>
-                <div>Impressions: ${p.adsPerformance.impressions} | CTR: ${p.adsPerformance.ctr}</div>
+              <div class="project-card-metric">
+                <span class="project-card-metric-label">Cost / Result</span>
+                <span class="project-card-metric-val">${p.adsPerformance.costPerResult}</span>
               </div>
             </div>
+            
+            <!-- Mini Sparkline Graph -->
+            <div class="project-card-sparkline-wrap">
+              <span class="project-card-sparkline-title">Campaign Conversion Trend (CTR & Leads)</span>
+              <svg class="project-card-sparkline-svg" viewBox="0 0 400 40" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="card-gradient-blue-${p.id}" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1877F2" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#1877F2" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="line" d="${spark.line}"></path>
+                <path class="area" d="${spark.area}" fill="url(#card-gradient-blue-${p.id})"></path>
+              </svg>
+            </div>
+            
+            <div class="project-card-ads-footer">
+              <span>Impressions: ${p.adsPerformance.impressions}</span>
+              <span>CTR: ${p.adsPerformance.ctr}</span>
+            </div>
           </div>
-
         </div>
-
-        <!-- Footer Info -->
-        <div class="insta-footer">
-          <div class="insta-actions">
-            <div class="insta-actions-left">
-              <i class="far fa-heart insta-action-icon btn-insta-like" title="Like"></i>
-              <i class="far fa-comment insta-action-icon" onclick="alert('Comment section is disabled for verified archive.')" title="Comment"></i>
-              <i class="far fa-paper-plane insta-action-icon" onclick="navigator.clipboard.writeText('${p.instagramLink}'); alert('Official link copied to clipboard!');" title="Share link"></i>
-            </div>
-            <i class="far fa-bookmark insta-action-icon" title="Save post"></i>
-          </div>
-          <div class="insta-likes"><span class="likes-count">${p.likesCount}</span> likes</div>
-          <div class="insta-caption">
-            <span class="insta-username">${p.instagramHandle}</span>${p.caption}
-          </div>
-          <div class="insta-time">2 hours ago</div>
+        
+        <!-- Action Buttons -->
+        <div class="project-card-actions">
+          <a href="${p.instagramLink}" target="_blank" class="project-btn project-btn-insta" aria-label="Visit Instagram Profile">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="${p.websiteLink}" target="_blank" class="project-btn project-btn-web" aria-label="Visit Live Website">
+            <i class="fas fa-globe"></i> Website
+          </a>
         </div>
       </div>
     `;
@@ -790,84 +783,9 @@ function renderShowcase() {
 }
 
 function initShowcaseInteractions() {
-  const cards = document.querySelectorAll('.insta-card');
+  const cards = document.querySelectorAll('.project-card');
   
-  cards.forEach(card => {
-    const id = card.getAttribute('data-id');
-    const proj = window.portfolioData.find(p => p.id === id);
-    if (!proj) return;
-
-    let slideIdx = 0;
-    const slidesCount = proj.images.length;
-    const track = card.querySelector('.insta-slides');
-    const dots = card.querySelectorAll('.insta-slider-dot');
-    
-    // 1. CAROUSEL PREV/NEXT EVENTS
-    const prevBtn = card.querySelector('.insta-slider-btn-prev');
-    const nextBtn = card.querySelector('.insta-slider-btn-next');
-    
-    function updateCardSlides() {
-      track.style.transform = `translateX(-${slideIdx * 100}%)`;
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === slideIdx);
-      });
-    }
-
-    prevBtn.addEventListener('click', () => {
-      slideIdx = (slideIdx > 0) ? slideIdx - 1 : slidesCount - 1;
-      updateCardSlides();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      slideIdx = (slideIdx < slidesCount - 1) ? slideIdx + 1 : 0;
-      updateCardSlides();
-    });
-
-    // 2. TAB VIEW TOGGLES
-    const tabBtns = card.querySelectorAll('.tab-btn');
-    const panels = card.querySelectorAll('.panel-view');
-    
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetView = btn.getAttribute('data-tab');
-        
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        panels.forEach(p => {
-          if (p.classList.contains(`panel-${targetView}`)) {
-            p.classList.add('active');
-          } else {
-            p.classList.remove('active');
-          }
-        });
-      });
-    });
-
-    // 3. HEART/LIKE ACTION TOGGLES
-    const likeBtn = card.querySelector('.btn-insta-like');
-    const likesCountEl = card.querySelector('.likes-count');
-    let isLiked = false;
-    let baseLikes = proj.likesCount;
-
-    likeBtn.addEventListener('click', () => {
-      isLiked = !isLiked;
-      likeBtn.classList.toggle('liked', isLiked);
-      likeBtn.classList.toggle('fas', isLiked);
-      likeBtn.classList.toggle('far', !isLiked);
-      
-      const newLikes = isLiked ? baseLikes + 1 : baseLikes;
-      likesCountEl.textContent = newLikes.toLocaleString();
-      
-      // Micro-bounce click animation
-      likeBtn.style.transform = 'scale(1.3)';
-      setTimeout(() => {
-        likeBtn.style.transform = '';
-      }, 150);
-    });
-  });
-
-  // 4. CATEGORY PILLS FILTER OPERATIONS
+  // CATEGORY PILLS FILTER OPERATIONS
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {

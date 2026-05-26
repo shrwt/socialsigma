@@ -2335,8 +2335,8 @@ section.section-padding {
 /* Instagram Showcase Grid */
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-bottom: 80px;
 }
 
@@ -2731,8 +2731,8 @@ section.section-padding {
 
 @media (max-width: 1024px) {
   .showcase-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -2747,6 +2747,11 @@ section.section-padding {
     margin-bottom: 2rem;
   }
   
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
   .ads-metrics-grid {
     grid-template-columns: 1fr;
   }
@@ -2756,3 +2761,516 @@ section.section-padding {
     height: 380px;
   }
 }
+
+/* Instagram Grid Style */
+.panel-creatives {
+  height: auto !important;
+}
+
+.panel-creatives .insta-body {
+  height: auto !important;
+  background: transparent;
+  overflow: visible !important;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: var(--white);
+  padding: 0;
+  width: 100%;
+}
+
+.insta-grid-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0f172a;
+}
+
+.insta-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.insta-grid-item:hover img {
+  transform: scale(1.06);
+}
+
+.insta-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  color: var(--white);
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+.insta-grid-item:hover .insta-grid-overlay {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   REDESIGNED MODERN PORTFOLIO CARDS (DARK & MOTION)
+   ========================================================================== */
+
+body {
+  background: var(--dark) !important;
+  color: var(--white) !important;
+}
+
+.portfolio-hero {
+  background: radial-gradient(circle at 50% 0%, rgba(24, 119, 242, 0.15) 0%, transparent 60%);
+  padding-bottom: 30px;
+}
+
+.portfolio-hero h1 {
+  background: linear-gradient(135deg, var(--white) 30%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  letter-spacing: -0.02em;
+}
+
+/* Redesigned grid container */
+.showcase-grid-redesigned {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 2.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover dynamic shadows */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(24, 119, 242, 0.15);
+}
+
+/* Brand specific glow effects */
+.project-card[data-brand="royal-venetian"]:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(24, 119, 242, 0.25);
+}
+.project-card[data-brand="mark-jillion"]:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(237, 73, 86, 0.25);
+}
+.project-card[data-brand="key4you"]:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 235, 59, 0.2);
+}
+.project-card[data-brand="black-wizard"]:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(193, 255, 114, 0.25);
+}
+
+/* Header layout */
+.project-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-logo-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card-logo-wrap {
+  transform: rotate(360deg);
+}
+
+.project-card-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.project-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-card-title {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+.project-card-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lime);
+  font-weight: 700;
+  background: rgba(193, 255, 114, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid rgba(193, 255, 114, 0.2);
+}
+
+/* Embedded Ads Manager Panel inside card */
+.project-card-ads {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-card-ads {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.project-card-ads-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.6rem;
+}
+
+.project-card-ads-header i {
+  color: var(--blue);
+}
+
+.project-card-ads-status-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #10b981;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.project-card-ads-status-active::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.project-card-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.project-card-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card-metric-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.project-card-metric-val {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: var(--white);
+}
+
+.project-card-metric.highlight-roas .project-card-metric-val {
+  color: var(--lime);
+  text-shadow: 0 0 10px rgba(193, 255, 114, 0.2);
+}
+
+.project-card-metric.highlight-conv .project-card-metric-val {
+  color: #3897f0;
+  text-shadow: 0 0 10px rgba(56, 151, 240, 0.2);
+}
+
+/* Embedded Sparkline Graphic */
+.project-card-sparkline-wrap {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-card-sparkline-title {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+.project-card-sparkline-svg {
+  width: 100%;
+  height: 40px;
+}
+
+.project-card-sparkline-svg path.line {
+  stroke: var(--blue);
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.project-card-sparkline-svg path.area {
+  fill: url(#card-gradient-blue);
+  opacity: 0.15;
+}
+
+.project-card-ads-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 0.6rem;
+}
+
+/* Action Button grid */
+.project-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-btn-insta {
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.project-btn-insta:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(220, 39, 67, 0.4);
+}
+
+.project-btn-web {
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.project-btn-web:hover {
+  background: var(--white);
+  color: var(--dark);
+  border-color: var(--white);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Centered Behance CTA button at bottom */
+.portfolio-cta-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 6rem;
+  width: 100%;
+}
+
+.btn-portfolio-behance {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1.2rem 2.8rem;
+  background: linear-gradient(135deg, #1877F2 0%, #0c3e7f 100%);
+  border: 1px solid rgba(24, 119, 242, 0.4);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(24, 119, 242, 0.2);
+}
+
+.btn-portfolio-behance:hover {
+  background: linear-gradient(135deg, #1e82ff 0%, #104c99 100%);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(24, 119, 242, 0.4), 0 0 15px rgba(24, 119, 242, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-portfolio-behance i {
+  font-size: 1.3rem;
+}
+
+/* Overrides */
+.portfolio-filters {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.filter-btn {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--blue) !important;
+  color: var(--white) !important;
+}
+
+@media (max-width: 1024px) {
+  .showcase-grid-redesigned {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .showcase-grid-redesigned {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    padding: 1.8rem;
+  }
+  
+  .project-card-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-cta-wrap {
+    margin: 3rem 0 4rem;
+  }
+}
+
+/* Homepage Slider support for Project Cards */
+.portfolio-track .project-card {
+  min-width: calc(33.333% - 1.333rem);
+}
+
+@media (max-width: 1024px) {
+  .portfolio-track .project-card {
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-track .project-card {
+    min-width: 100%;
+  }
+}
+
+/* Homepage Portfolio View Details Button */
+.portfolio-view-details-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.btn-view-details-portfolio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 2.2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-view-details-portfolio:hover {
+  background: var(--white);
+  color: var(--dark);
+  border-color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
