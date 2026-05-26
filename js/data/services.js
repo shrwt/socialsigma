@@ -54,6 +54,20 @@ const capabilitiesData = [
       "Keyword Ranking",
       "Link Building"
     ]
+  },
+  {
+    id: "05",
+    title: "Drone & Photoshoot",
+    description: "Cinematic aerial shoots and high-end creative photography that capture the true essence of your brand.",
+    video: "https://assets.mixkit.co/videos/preview/mixkit-drone-shot-of-a-beautiful-coastline-4835-large.mp4",
+    items: [
+      "Aerial Cinematography",
+      "Product & Lifestyle Shoots",
+      "4K Drone Footage",
+      "Creative Concept Direction",
+      "Color Grading & Post-Production",
+      "Commercial Brand Photography"
+    ]
   }
 ];
 
