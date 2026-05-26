@@ -318,7 +318,7 @@ header.site-header.scrolled {
   font-family: var(--font-heading);
   font-weight: 550;
   font-size: 0.95rem;
-  color: var(--text-dark);
+  color: var(--white);
   position: relative;
   padding: 0.5rem 0;
 }
