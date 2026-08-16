@@ -16,7 +16,10 @@
   <meta property="og:url" content="https://www.socialsigma.in/">
   <meta property="og:type" content="website">
   
-  <!-- Styling Stylesheet -->
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo-icon.png">
+    <!-- Styling Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   
   <!-- FontAwesome for Premium Icons -->
@@ -24,40 +27,104 @@
 </head>
 <body>
 
-  <!-- --- Skyrocketing Rocket Intro Loader --- -->
-  <div id="rocket-loader" aria-hidden="true">
-    <div class="loader-stars"></div>
-    <div class="loader-container">
-      <div class="rocket-wrapper" id="rocket-wrapper">
-        <!-- Minimalist Rocket SVG -->
-        <svg class="rocket-svg" viewBox="0 0 54 110" xmlns="http://www.w3.org/2000/svg">
-          <!-- Rocket Body -->
-          <path d="M27,10 C15,35 12,65 12,85 L42,85 C42,65 39,35 27,10 Z" fill="#1877F2" />
-          <!-- Nose Cone -->
-          <path d="M27,10 C21,22 20,32 20,40 L34,40 C34,32 33,22 27,10 Z" fill="#c1ff72" />
-          <!-- Window -->
-          <circle cx="27" cy="55" r="5" fill="#0a0f1d" stroke="#ffffff" stroke-width="2"/>
-          <!-- Left Fin -->
-          <path d="M12,80 C2,90 2,100 2,100 C2,100 12,98 12,85 Z" fill="#c1ff72" />
-          <!-- Right Fin -->
-          <path d="M42,80 C52,90 52,100 52,100 C52,100 42,98 42,85 Z" fill="#c1ff72" />
-          <!-- Thruster -->
-          <rect x="23" y="85" width="8" height="6" fill="#64748b" rx="2"/>
-        </svg>
-        <!-- Thruster Flame -->
-        <div class="rocket-flame"></div>
+  <!-- --- Hyperrealistic Quantum Vortex HUD Loader --- -->
+  <!-- --- Developer MacBook Rocket Launch Preloader --- -->
+  <div id="story-loader" aria-hidden="true">
+    <!-- Canvas for Fire Blast Particles and Shockwave -->
+    <canvas id="story-canvas"></canvas>
+
+    <!-- Workspace Scene SVG -->
+    <svg class="workspace-svg" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Screen glow gradient -->
+        <linearGradient id="screen-glow" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#1877F2" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#c1ff72" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="desk-shadow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(0,0,0,0.65)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+        </radialGradient>
+      </defs>
+      
+      <!-- Desk Shadow -->
+      <ellipse cx="300" cy="335" rx="160" ry="8" fill="url(#desk-shadow)" />
+
+      <!-- Desk Table top -->
+      <rect x="120" y="325" width="360" height="6" rx="3" fill="rgba(255,255,255,0.06)" />
+      <!-- Table legs -->
+      <line x1="160" y1="331" x2="150" y2="390" stroke="rgba(255,255,255,0.03)" stroke-width="4" stroke-linecap="round" />
+      <line x1="440" y1="331" x2="450" y2="390" stroke="rgba(255,255,255,0.03)" stroke-width="4" stroke-linecap="round" />
+
+      <!-- Chair Silhouette -->
+      <path d="M190,360 L195,300 Q195,240 185,210 L170,210 L175,190 L210,190 L205,300 Z" fill="rgba(255,255,255,0.015)" />
+      
+      <!-- Developer Boy Silhouette -->
+      <g class="dev-character">
+        <!-- Body / Torso -->
+        <path d="M215,325 C210,290 215,260 225,235 C235,210 245,210 250,210 C258,210 262,230 260,250 C258,270 250,300 245,325 Z" fill="rgba(255,255,255,0.07)" />
+        <!-- Head -->
+        <circle cx="245" cy="185" r="16" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <!-- Hair / Cap -->
+        <path d="M230,185 C230,170 245,165 258,175 C260,180 258,190 255,190 C245,190 235,192 230,185 Z" fill="rgba(24, 119, 242, 0.3)" />
+        <!-- Arms typing -->
+        <path class="dev-arm arm-left" d="M245,235 Q275,245 295,270 L305,270 Q285,250 245,242" fill="rgba(255,255,255,0.08)" />
+        <path class="dev-arm arm-right" d="M250,240 Q280,250 300,272 L308,270 Q290,252 250,246" fill="rgba(255,255,255,0.1)" />
+      </g>
+
+      <!-- MacBook Profile -->
+      <g class="macbook">
+        <!-- Base -->
+        <rect x="300" y="320" width="48" height="4" rx="2" fill="rgba(255,255,255,0.18)" />
+        <!-- Screen angled -->
+        <path d="M342,320 L358,275 Q360,270 361,270 L363,271 L347,320 Z" fill="rgba(255,255,255,0.25)" />
+        <!-- Glowing screen -->
+        <polygon points="342,320 357,276 357,320" fill="rgba(24, 119, 242, 0.05)" />
+      </g>
+
+      <!-- Screen glow spotlight cone -->
+      <polygon points="340,320 440,50 260,50" fill="url(#screen-glow)" />
+
+      <!-- Glowing Code Stream -->
+      <g class="code-stream" opacity="0.45">
+        <circle cx="330" cy="270" r="1.5" fill="#c1ff72" class="code-dot float-1" />
+        <circle cx="345" cy="250" r="1.0" fill="#1877F2" class="code-dot float-2" />
+        <circle cx="320" cy="230" r="2.0" fill="#c1ff72" class="code-dot float-3" />
+        <circle cx="355" cy="210" r="1.2" fill="#1877F2" class="code-dot float-4" />
+      </g>
+
+      <!-- SVG Rocket (Landed on screen, preparing to launch) -->
+      <g id="story-rocket" transform="translate(284, 105) scale(2.0)">
+        <!-- Rocket thruster flame -->
+        <path class="rocket-thruster-flame" id="rocket-flame-element" d="M20,85 Q27,110 34,85 Z" fill="#ff4500" opacity="0" />
+        <!-- Rocket body -->
+        <path d="M27,15 C12,35 10,65 10,85 L44,85 C44,65 42,35 27,15 Z" fill="#ffffff" />
+        <!-- Nose cone -->
+        <path d="M27,15 C18,25 17,32 17,40 L37,40 C37,32 36,25 27,15 Z" fill="#1877F2" />
+        <!-- Left Fin -->
+        <path d="M10,80 C2,88 0,95 0,95 C0,95 8,93 10,85 Z" fill="#c1ff72" />
+        <!-- Right Fin -->
+        <path d="M44,80 C52,88 54,95 54,95 C54,95 46,93 44,85 Z" fill="#c1ff72" />
+        <!-- TEXT: YOUR BUSINESS stacked horizontally -->
+        <text x="27" y="55" text-anchor="middle" fill="#05070a" font-size="6.5" font-weight="900" font-family="var(--font-heading)" letter-spacing="0.5">YOUR</text>
+        <text x="27" y="68" text-anchor="middle" fill="#1877F2" font-size="5.5" font-weight="900" font-family="var(--font-heading)" letter-spacing="0.3">BUSINESS</text>
+      </g>
+    </svg>
+
+    <!-- Bottom HUD Info Bar & Progress Meter -->
+    <div class="story-hud">
+      <div class="story-progress-bar">
+        <div class="story-progress-fill" id="story-progress-fill"></div>
       </div>
-      <div class="loader-text-wrap">
-        <p class="loader-subtitle">Igniting Engine</p>
-        <img src="assets/logo-white.svg" alt="Social Sigma Logo" class="loader-logo">
-        <div class="loader-progress-bar">
-          <div class="loader-progress-fill" id="loader-progress"></div>
-        </div>
+      <div class="story-telemetry">
+        <span class="story-percent" id="story-percent">00%</span>
+        <span class="story-subtitle" id="story-subtitle">BOOTING SYSTEM...</span>
       </div>
     </div>
   </div>
 
-  <!-- --- Fixed Header & Navigation --- -->
+  <div id="app-wrapper">
+    <!-- --- Fixed Header & Navigation --- -->
   <header class="site-header" id="site-header">
     <div class="nav-container">
       <a href="#" class="logo" id="nav-logo" aria-label="Social Sigma Logo">
@@ -271,12 +338,17 @@
           </div>
         </div>
         
-        <!-- Interactive video block -->
+        <!-- Interactive culture motion graphic block -->
         <div class="about-media reveal-item reveal-delay-2">
-          <video id="about-video" loop muted autoplay playsinline>
-            <source src="https://www.socialsigma.in/wp-content/uploads/2026/03/marketing-is-our-jam.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <!-- Interactive fluid motion graphic canvas -->
+          <canvas id="culture-canvas"></canvas>
+          
+          <!-- Cyber HUD values overlay -->
+          <div class="culture-hud-overlay">
+            <span class="culture-value-label">CULTURE_ENGAGEMENT</span>
+            <span class="culture-value-active" id="culture-active-value">CREATIVE</span>
+          </div>
+
           <div class="about-media-overlay">
             <span class="about-media-tag">Our Culture</span>
             <p class="about-media-title">Spread it Thick & Direct</p>
@@ -482,7 +554,7 @@
       
       <div class="footer-bottom">
         <p>&copy; 2026 Social Sigma. All rights reserved. Created with absolute visual and motion excellence.</p>
-        <p>Gurgaon, India</p>
+        <p>Gurgaon, India &nbsp;|&nbsp; <a href="offerings.html" id="footer-offerings-link" style="color:#c1ff72; text-decoration:none; font-weight:600; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">Offerings</a></p>
       </div>
     </div>
   </footer>
@@ -502,6 +574,12 @@
         <!-- Thumbnail strips -->
       </div>
     </div>
+  </div>
+  </div>
+
+  <!-- Custom Rocket Cursor Follower -->
+  <div id="rocket-cursor" class="rocket-cursor-follower">
+    <i class="fas fa-rocket"></i>
   </div>
 
   <!-- --- Load scripts --- -->

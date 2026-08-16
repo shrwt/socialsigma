@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Offerings | Social Sigma – Gurgaon's #1 Digital Marketing Agency</title>
+  <meta name="description" content="Explore all services offered by Social Sigma – performance marketing, social media, influencer promotions, SEO, web development, drone shoots and more. Get started today.">
+  <meta name="keywords" content="digital marketing services, social media marketing gurgaon, performance marketing agency, influencer marketing, SEO services, web development, drone shoots, social sigma offerings">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Our Offerings | Social Sigma – Gurgaon's #1 Digital Marketing Agency">
+  <meta property="og:description" content="From paid ads to drone shoots – explore every service we offer and see how Social Sigma can elevate your brand.">
+  <meta property="og:url" content="https://www.socialsigma.in/offerings.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #1877F2; --blue-dark: #0f5fc7;
+      --lime: #c1ff72; --lime-dark: #96d94e;
+      --bg: #05070a; --bg2: #0a0d14; --bg3: #0f1420;
+      --surface: rgba(255,255,255,0.04); --surface2: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.08);
+      --text: #e8eaf0; --text-muted: rgba(232,234,240,0.55);
+      --font-heading: 'Outfit', sans-serif; --font-body: 'Inter', sans-serif;
+      --radius: 20px; --radius-sm: 12px;
+      --transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      --glow-blue: 0 0 40px rgba(24,119,242,0.4);
+      --glow-lime: 0 0 40px rgba(193,255,114,0.35);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text); overflow-x: hidden; cursor: none; }
+    #cursor-rocket { position: fixed; top: 0; left: 0; width: 28px; height: 28px; pointer-events: none; z-index: 99999; transform: translate(-50%,-50%) rotate(-45deg); font-size: 18px; color: var(--lime); filter: drop-shadow(0 0 6px var(--lime)); }
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--blue), var(--lime)); z-index: 99999; width: 0%; transition: width 0.1s; }
+    #star-canvas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+    #rocket-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; }
+
+    /* HEADER */
+    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 9000; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; background: rgba(5,7,10,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: var(--transition); }
+    .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .header-logo img { height: 36px; width: auto; }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .btn-header-back { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; color: var(--text); font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: var(--transition); cursor: none; }
+    .btn-header-back:hover { background: var(--surface2); border-color: rgba(255,255,255,0.2); }
+    .btn-whatsapp-header { display: flex; align-items: center; gap: 8px; padding: 10px 22px; background: linear-gradient(135deg, #25D366, #128C7E); border: none; border-radius: 50px; color: #fff; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: var(--transition); cursor: none; box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
+    .btn-whatsapp-header:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 8px 32px rgba(37,211,102,0.55); }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 100px 2rem 60px; background: radial-gradient(ellipse 80% 60% at 20% 30%, rgba(24,119,242,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 70%, rgba(193,255,114,0.08) 0%, transparent 60%); }
+    .hero-content { position: relative; z-index: 5; text-align: center; max-width: 840px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: rgba(24,119,242,0.12); border: 1px solid rgba(24,119,242,0.3); border-radius: 50px; font-family: var(--font-heading); font-size: 0.78rem; font-weight: 700; color: var(--blue); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2rem; animation: fadeInUp 0.8s ease both; }
+    .badge-pulse { width: 7px; height: 7px; background: var(--blue); border-radius: 50%; animation: pulseDot 1.5s ease infinite; }
+    .hero-title { font-family: var(--font-heading); font-size: clamp(2.6rem, 7vw, 5.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.5rem; animation: fadeInUp 0.9s ease 0.1s both; }
+    .line-lime { color: var(--lime); } .line-blue { color: var(--blue); }
+    .hero-subtitle { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-muted); line-height: 1.7; max-width: 580px; margin: 0 auto 2.5rem; animation: fadeInUp 1s ease 0.2s both; }
+    .hero-ctas { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 1.1s ease 0.3s both; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; background: linear-gradient(135deg, var(--blue), var(--blue-dark)); border: none; border-radius: 50px; color: #fff; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; text-decoration: none; cursor: none; transition: var(--transition); box-shadow: var(--glow-blue); }
+    .btn-primary:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 0 60px rgba(24,119,242,0.6); }
+    .btn-whatsapp-hero { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; background: linear-gradient(135deg, #25D366, #128C7E); border: none; border-radius: 50px; color: #fff; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; text-decoration: none; cursor: none; transition: var(--transition); box-shadow: 0 4px 30px rgba(37,211,102,0.45); }
+    .btn-whatsapp-hero:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 0 60px rgba(37,211,102,0.6); }
+
+    /* STATS STRIP */
+    .stats-strip { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 0; }
+    .stats-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item { text-align: center; padding: 20px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: var(--font-heading); font-size: 3rem; font-weight: 900; color: var(--lime); line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+    /* CAPABILITIES SECTION */
+    .capabilities-section { padding: 100px 0; background: var(--bg3); position: relative; }
+    .capabilities-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--blue), var(--lime), transparent); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .section-header { margin-bottom: 4rem; }
+    .section-tag { display: inline-block; font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--lime); background: rgba(193,255,114,0.08); border: 1px solid rgba(193,255,114,0.2); padding: 6px 16px; border-radius: 50px; margin-bottom: 1.2rem; }
+    .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 1rem; }
+    .section-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 540px; line-height: 1.7; }
+    .cap-list { display: flex; flex-direction: column; }
+    .cap-row { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; gap: 2rem; padding: 2rem 2.5rem; border-bottom: 1px solid var(--border); transition: var(--transition); cursor: none; position: relative; overflow: hidden; }
+    .cap-row::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(24,119,242,0.06), rgba(193,255,114,0.04)); opacity: 0; transition: var(--transition); }
+    .cap-row:hover::before { opacity: 1; }
+    .cap-row.rocket-active { background: rgba(193,255,114,0.04); border-color: rgba(193,255,114,0.25); }
+    .cap-row.rocket-active .cap-num { color: var(--lime); }
+    .cap-row.rocket-active .cap-title { color: var(--lime); }
+    .cap-num { font-family: var(--font-heading); font-size: 3.5rem; font-weight: 900; color: rgba(255,255,255,0.08); transition: var(--transition); line-height: 1; }
+    .cap-row:hover .cap-num { color: var(--lime); }
+    .cap-body { display: flex; flex-direction: column; gap: 0.8rem; }
+    .cap-title { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; transition: var(--transition); }
+    .cap-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; max-width: 600px; }
+    .cap-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5rem; }
+    .cap-tag { font-family: var(--font-heading); font-size: 0.72rem; font-weight: 600; padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; color: var(--text-muted); transition: var(--transition); }
+    .cap-row:hover .cap-tag, .cap-row.rocket-active .cap-tag { background: rgba(193,255,114,0.07); border-color: rgba(193,255,114,0.2); color: var(--lime); }
+    .cap-arrow { font-size: 1.4rem; color: rgba(255,255,255,0.15); transition: var(--transition); }
+    .cap-row:hover .cap-arrow { color: var(--lime); transform: rotate(45deg) scale(1.3); }
+
+    /* SPECIALIZED SERVICES */
+    .specialized-section { padding: 100px 0; background: var(--bg); }
+    .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .spec-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; transition: var(--transition); cursor: none; position: relative; overflow: hidden; }
+    .spec-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(193,255,114,0.06) 0%, transparent 60%); opacity: 0; transition: var(--transition); }
+    .spec-card:hover::before { opacity: 1; }
+    .spec-card:hover { border-color: rgba(193,255,114,0.25); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5), var(--glow-lime); }
+    .spec-card.rocket-active { border-color: rgba(193,255,114,0.4); box-shadow: 0 0 40px rgba(193,255,114,0.3); }
+    .spec-icon { width: 54px; height: 54px; background: linear-gradient(135deg, rgba(24,119,242,0.15), rgba(193,255,114,0.08)); border: 1px solid rgba(24,119,242,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--lime); margin-bottom: 1.2rem; transition: var(--transition); }
+    .spec-card:hover .spec-icon { background: linear-gradient(135deg, rgba(193,255,114,0.15), rgba(24,119,242,0.08)); transform: scale(1.1) rotate(5deg); }
+    .spec-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; margin-bottom: 0.8rem; }
+    .spec-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* WHY US */
+    .why-section { padding: 100px 0; background: var(--bg2); position: relative; overflow: hidden; }
+    .why-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(24,119,242,0.06) 0%, transparent 70%); pointer-events: none; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; }
+    .why-item { display: flex; align-items: flex-start; gap: 1rem; opacity: 0; transform: translateX(-20px); transition: var(--transition); }
+    .why-item.in-view { opacity: 1; transform: translateX(0); }
+    .why-check { width: 32px; height: 32px; background: linear-gradient(135deg, var(--lime), var(--lime-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #000; font-weight: 900; flex-shrink: 0; margin-top: 2px; }
+    .why-text strong { display: block; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .why-text p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+    .why-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; position: relative; overflow: hidden; }
+    .why-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--blue), var(--lime)); }
+    .why-card-icon { font-size: 3rem; color: var(--lime); margin-bottom: 1.5rem; }
+    .why-card h3 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; }
+    .why-card p { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; }
+
+    /* CTA SECTION */
+    .cta-section { padding: 100px 0; text-align: center; position: relative; overflow: hidden; background: var(--bg3); }
+    .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(24,119,242,0.1) 0%, transparent 70%), radial-gradient(ellipse 60% 60% at 30% 20%, rgba(193,255,114,0.06) 0%, transparent 60%); }
+    .cta-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .cta-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 1.5rem; }
+    .cta-desc { font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 3rem; }
+    .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .btn-whatsapp-cta { display: inline-flex; align-items: center; gap: 12px; padding: 20px 44px; background: linear-gradient(135deg, #25D366, #128C7E); border: none; border-radius: 50px; color: #fff; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; text-decoration: none; cursor: none; transition: var(--transition); box-shadow: 0 8px 40px rgba(37,211,102,0.45); position: relative; overflow: hidden; }
+    .btn-whatsapp-cta::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transform: translateX(-100%); transition: 0.5s ease; }
+    .btn-whatsapp-cta:hover::before { transform: translateX(100%); }
+    .btn-whatsapp-cta:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 12px 60px rgba(37,211,102,0.65); }
+    .btn-scroll-form { display: inline-flex; align-items: center; gap: 10px; padding: 20px 36px; background: var(--surface2); border: 1px solid var(--border); border-radius: 50px; color: var(--text); font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; text-decoration: none; cursor: none; transition: var(--transition); }
+    .btn-scroll-form:hover { border-color: rgba(255,255,255,0.25); background: var(--surface); transform: translateY(-3px); }
+
+    /* FORM SECTION */
+    .form-section { padding: 100px 0; background: var(--bg); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+    .form-info h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; letter-spacing: -1px; line-height: 1.15; margin-bottom: 1.2rem; }
+    .form-info p { color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; font-size: 0.97rem; }
+    .contact-detail { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem; text-decoration: none; color: var(--text); transition: var(--transition); cursor: none; }
+    .contact-detail:hover { border-color: rgba(193,255,114,0.25); background: rgba(193,255,114,0.04); }
+    .contact-detail-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-detail-icon.blue { background: rgba(24,119,242,0.15); color: var(--blue); }
+    .contact-detail-icon.green { background: rgba(37,211,102,0.15); color: #25D366; }
+    .contact-detail-icon.lime { background: rgba(193,255,114,0.1); color: var(--lime); }
+    .contact-detail-text label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 2px; font-weight: 500; }
+    .contact-detail-text span { font-family: var(--font-heading); font-size: 0.92rem; font-weight: 600; }
+    .form-embed { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; min-height: 720px; display: flex; flex-direction: column; }
+    .form-embed iframe { border: none; border-radius: 12px; background: transparent; flex: 1; }
+
+    /* FOOTER */
+    .site-footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+    .footer-logo { height: 32px; width: auto; margin-bottom: 1rem; }
+    .footer-tagline { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+    .footer-col h4 { font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.9rem; color: var(--text-muted); text-decoration: none; transition: color 0.25s; cursor: none; }
+    .footer-links a:hover { color: var(--lime); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.82rem; color: var(--text-muted); }
+    .footer-socials { display: flex; gap: 0.8rem; }
+    .footer-social-link { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: var(--transition); cursor: none; }
+    .footer-social-link:hover { background: rgba(193,255,114,0.12); border-color: rgba(193,255,114,0.3); color: var(--lime); transform: translateY(-3px); }
+
+    /* FLOATING WHATSAPP */
+    .floating-whatsapp { position: fixed; bottom: 32px; right: 32px; z-index: 8000; display: flex; align-items: center; gap: 12px; padding: 14px 24px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50px; box-shadow: 0 8px 40px rgba(37,211,102,0.5); text-decoration: none; color: #fff; font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; cursor: none; transition: var(--transition); animation: floatWA 3s ease-in-out infinite; }
+    .floating-whatsapp:hover { transform: scale(1.08) translateY(-3px); box-shadow: 0 12px 60px rgba(37,211,102,0.7); }
+    .floating-whatsapp i { font-size: 1.2rem; }
+    .wa-ripple { position: absolute; inset: -6px; border-radius: 50px; border: 2px solid rgba(37,211,102,0.4); animation: waRipple 2s ease-out infinite; }
+
+    /* REVEAL ANIMATIONS */
+    .reveal-item { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal-item.in-view { opacity: 1; transform: translateY(0); }
+
+    /* KEYFRAMES */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
+    @keyframes floatWA { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes waRipple { 0% { opacity: 0.8; transform: scale(1); } 100% { opacity: 0; transform: scale(1.5); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .spec-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .stats-strip-grid { grid-template-columns: repeat(2, 1fr); }
+      .cap-row { grid-template-columns: 50px 1fr auto; padding: 1.5rem; }
+      .cap-num { font-size: 2.5rem; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .floating-whatsapp span { display: none; }
+      .floating-whatsapp { padding: 14px; border-radius: 50%; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { letter-spacing: -1px; }
+      .cap-row { grid-template-columns: 1fr; gap: 1rem; }
+      .cap-arrow { display: none; }
+    }
+
+    /* ===== THREE.JS 3D HERO CANVAS ===== */
+    #threejs-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+
+    /* ===== 3D CARD TILT (perspective) ===== */
+    .spec-card {
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .cap-row {
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    /* ===== 3D FLOATING BADGES in hero ===== */
+    .hero-3d-badge {
+      position: absolute;
+      z-index: 10;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 12px 20px;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text);
+      pointer-events: none;
+      animation: badge3dFloat 5s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .hero-3d-badge.b1 { top: 18%; left: 4%; animation-delay: 0s; color: var(--lime); border-color: rgba(193,255,114,0.2); }
+    .hero-3d-badge.b2 { top: 30%; right: 4%; animation-delay: -1.5s; color: var(--blue); border-color: rgba(24,119,242,0.25); }
+    .hero-3d-badge.b3 { bottom: 22%; left: 6%; animation-delay: -3s; color: #fff; border-color: rgba(255,255,255,0.12); }
+    .hero-3d-badge.b4 { bottom: 28%; right: 5%; animation-delay: -2s; color: var(--lime); border-color: rgba(193,255,114,0.2); }
+    .hero-3d-badge .badge-val { display: block; font-size: 1.6rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+
+    @keyframes badge3dFloat {
+      0%   { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+      25%  { transform: translateY(-12px) rotateX(4deg) rotateY(-4deg); }
+      50%  { transform: translateY(-6px) rotateX(-3deg) rotateY(5deg); }
+      75%  { transform: translateY(-14px) rotateX(5deg) rotateY(3deg); }
+      100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+    }
+
+    /* ===== 3D ROTATING SERVICE ICONS ===== */
+    .spec-icon {
+      perspective: 600px;
+    }
+    .spec-icon i {
+      display: block;
+      transform-style: preserve-3d;
+      animation: iconSpin3d 8s ease-in-out infinite;
+    }
+    @keyframes iconSpin3d {
+      0%   { transform: rotateY(0deg) rotateX(0deg); }
+      25%  { transform: rotateY(20deg) rotateX(10deg); }
+      50%  { transform: rotateY(0deg) rotateX(-10deg); }
+      75%  { transform: rotateY(-20deg) rotateX(5deg); }
+      100% { transform: rotateY(0deg) rotateX(0deg); }
+    }
+    .spec-card:nth-child(1) .spec-icon i { animation-delay: 0s; }
+    .spec-card:nth-child(2) .spec-icon i { animation-delay: -1.3s; }
+    .spec-card:nth-child(3) .spec-icon i { animation-delay: -2.6s; }
+    .spec-card:nth-child(4) .spec-icon i { animation-delay: -0.8s; }
+    .spec-card:nth-child(5) .spec-icon i { animation-delay: -3.5s; }
+    .spec-card:nth-child(6) .spec-icon i { animation-delay: -4.5s; }
+
+    /* ===== 3D STAT NUMBERS ===== */
+    .stat-num {
+      text-shadow: 0 4px 20px rgba(193,255,114,0.5);
+      animation: statPulse3d 4s ease-in-out infinite;
+    }
+    @keyframes statPulse3d {
+      0%, 100% { transform: perspective(400px) translateZ(0); text-shadow: 0 4px 20px rgba(193,255,114,0.5); }
+      50%       { transform: perspective(400px) translateZ(20px); text-shadow: 0 8px 40px rgba(193,255,114,0.9); }
+    }
+
+    /* ===== 3D WHY CARD ===== */
+    .why-card {
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .why-card:hover {
+      transform: perspective(800px) rotateX(-4deg) rotateY(4deg) translateZ(10px);
+    }
+
+    /* ===== 3D CTA BUTTON ===== */
+    .btn-whatsapp-cta {
+      transform-style: preserve-3d;
+    }
+    .btn-whatsapp-cta:hover {
+      transform: perspective(500px) translateZ(15px) translateY(-4px) scale(1.04);
+    }
+
+    /* ===== FLOATING 3D PARTICLES (extra layer) ===== */
+    .particle-3d {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      animation: particle3dDrift linear infinite;
+      opacity: 0;
+    }
+    @keyframes particle3dDrift {
+      0%   { opacity: 0; transform: translateY(100vh) translateX(0) scale(0.3); }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.4; }
+      100% { opacity: 0; transform: translateY(-100px) translateX(80px) scale(1.2); }
+    }
+
+    /* ===== REDESIGNED SPECIALIZED SECTION (BENTO/TICKER STYLE) ===== */
+    .specialized-section {
+      padding: 100px 0;
+      background: var(--bg3);
+      overflow: hidden;
+    }
+
+    /* Replace old spec-grid with new bento layout */
+    .spec-bento {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+
+    .spec-bento-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: none;
+      transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.6rem;
+    }
+
+    /* Bento sizes */
+    .spec-bento-card:nth-child(1) { grid-column: span 3; min-height: 260px; }
+    .spec-bento-card:nth-child(2) { grid-column: span 2; min-height: 260px; }
+    .spec-bento-card:nth-child(3) { grid-column: span 1; min-height: 260px; }
+    .spec-bento-card:nth-child(4) { grid-column: span 1; min-height: 240px; }
+    .spec-bento-card:nth-child(5) { grid-column: span 2; min-height: 240px; }
+    .spec-bento-card:nth-child(6) { grid-column: span 3; min-height: 240px; }
+
+    /* Unique gradient backgrounds per card */
+    .spec-bento-card:nth-child(1) { background: linear-gradient(135deg, #0d1b3e 0%, #1877F2 100%); border: 1px solid rgba(24,119,242,0.3); }
+    .spec-bento-card:nth-child(2) { background: linear-gradient(135deg, #0a1a0e 0%, #1a7a3a 100%); border: 1px solid rgba(26,122,58,0.3); }
+    .spec-bento-card:nth-child(3) { background: linear-gradient(135deg, #1a0d0d 0%, #8b1a1a 100%); border: 1px solid rgba(139,26,26,0.35); }
+    .spec-bento-card:nth-child(4) { background: linear-gradient(135deg, #0f0d1a 0%, #4a1a8b 100%); border: 1px solid rgba(74,26,139,0.35); }
+    .spec-bento-card:nth-child(5) { background: linear-gradient(135deg, #1a1000 0%, #7a5500 100%); border: 1px solid rgba(122,85,0,0.35); }
+    .spec-bento-card:nth-child(6) { background: linear-gradient(135deg, #071a12 0%, #0a6644 100%); border: 1px solid rgba(10,102,68,0.3); }
+
+    .spec-bento-card:hover {
+      transform: perspective(800px) rotateX(-3deg) rotateY(3deg) scale(1.02) translateZ(8px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.7);
+      z-index: 2;
+    }
+
+    /* Noise/grain overlay per card */
+    .spec-bento-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Big background icon */
+    .spec-bento-card .bento-bg-icon {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      font-size: 6rem;
+      opacity: 0.07;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .spec-bento-card:hover .bento-bg-icon {
+      opacity: 0.14;
+      transform: translateY(-50%) scale(1.15) rotate(-8deg);
+    }
+
+    /* For wide cards, show bg icon bigger */
+    .spec-bento-card:nth-child(1) .bento-bg-icon,
+    .spec-bento-card:nth-child(6) .bento-bg-icon { font-size: 9rem; }
+
+    .spec-bento-card .bento-content { position: relative; z-index: 1; }
+
+    .spec-bento-num {
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.8rem;
+    }
+
+    .spec-bento-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+    }
+
+    .spec-bento-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      display: none;
+    }
+
+    /* Show desc on wider cards or on hover */
+    .spec-bento-card:nth-child(1) .spec-bento-desc,
+    .spec-bento-card:nth-child(5) .spec-bento-desc,
+    .spec-bento-card:nth-child(6) .spec-bento-desc { display: block; }
+
+    .spec-bento-card:hover .spec-bento-desc { display: block; }
+
+    .spec-bento-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 0.8rem;
+      padding: 5px 12px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(6px);
+    }
+
+    @media (max-width: 1024px) {
+      .spec-bento { grid-template-columns: repeat(3, 1fr); }
+      .spec-bento-card:nth-child(1) { grid-column: span 2; }
+      .spec-bento-card:nth-child(2) { grid-column: span 1; }
+      .spec-bento-card:nth-child(3) { grid-column: span 1; }
+      .spec-bento-card:nth-child(4) { grid-column: span 1; }
+      .spec-bento-card:nth-child(5) { grid-column: span 1; }
+      .spec-bento-card:nth-child(6) { grid-column: span 3; }
+    }
+    @media (max-width: 640px) {
+      .spec-bento { grid-template-columns: 1fr 1fr; }
+      .spec-bento-card:nth-child(n) { grid-column: span 1; min-height: 180px; }
+      .spec-bento-card:nth-child(1),
+      .spec-bento-card:nth-child(6) { grid-column: span 2; }
+    }
+
+    /* ===== 3D PROJECTS SHOWCASE SECTION ===== */
+    .projects-3d-section {
+      padding: 100px 0;
+      background: var(--bg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .projects-3d-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(24,119,242,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* 3D Stage */
+    .projects-stage {
+      perspective: 1200px;
+      perspective-origin: 50% 40%;
+      margin-top: 4rem;
+      height: 380px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .projects-carousel-3d {
+      width: 700px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1.2s cubic-bezier(0.23,1,0.32,1);
+    }
+
+    .project-card-3d {
+      position: absolute;
+      width: 280px;
+      height: 260px;
+      top: 50%;
+      left: 50%;
+      margin: -130px -140px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.8rem;
+      cursor: none;
+      transition: box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+
+    /* Each card gets unique bg */
+    .project-card-3d:nth-child(1) { background: linear-gradient(145deg, #0d1b3e, #1877F2); border: 1px solid rgba(24,119,242,0.4); }
+    .project-card-3d:nth-child(2) { background: linear-gradient(145deg, #0a1a0e, #22863a); border: 1px solid rgba(34,134,58,0.35); }
+    .project-card-3d:nth-child(3) { background: linear-gradient(145deg, #1a0d0d, #9b2335); border: 1px solid rgba(155,35,53,0.35); }
+    .project-card-3d:nth-child(4) { background: linear-gradient(145deg, #0f0d1a, #5a2d82); border: 1px solid rgba(90,45,130,0.35); }
+    .project-card-3d:nth-child(5) { background: linear-gradient(145deg, #001a1a, #0d7a7a); border: 1px solid rgba(13,122,122,0.4); }
+    .project-card-3d:nth-child(6) { background: linear-gradient(145deg, #0d1a00, #4a7a00); border: 1px solid rgba(193,255,114,0.25); }
+
+    .project-card-3d::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7) 100%);
+    }
+
+    .project-card-3d .card-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-card-3d .proj-category {
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card-3d .proj-name {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card-3d .proj-sub {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+    }
+
+    .proj-roas-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(193,255,114,0.15);
+      border: 1px solid rgba(193,255,114,0.3);
+      border-radius: 50px;
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--lime);
+    }
+
+    /* Big floating background icon per project card */
+    .project-card-3d .proj-bg-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 5rem;
+      opacity: 0.08;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Nav arrows */
+    .projects-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .proj-nav-btn {
+      width: 48px; height: 48px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      cursor: none;
+      transition: var(--transition);
+    }
+    .proj-nav-btn:hover {
+      background: rgba(193,255,114,0.1);
+      border-color: rgba(193,255,114,0.3);
+      color: var(--lime);
+    }
+
+    .proj-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .proj-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: all 0.3s ease;
+      cursor: none;
+    }
+    .proj-dot.active {
+      background: var(--lime);
+      width: 28px;
+      border-radius: 4px;
+    }
+
+    /* Floating project name ticker (below the 3D carousel) */
+    .projects-ticker {
+      margin-top: 3.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .projects-ticker::before,
+    .projects-ticker::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .projects-ticker::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+    .projects-ticker::after  { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+
+    .ticker-track {
+      display: flex;
+      gap: 2rem;
+      animation: tickerScroll 18s linear infinite;
+      width: max-content;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.5px;
+      padding: 0 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .ticker-item .ticker-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--lime);
+      flex-shrink: 0;
+    }
+
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <canvas id="star-canvas"></canvas>
+  <canvas id="rocket-canvas"></canvas>
+  <div id="cursor-rocket"><i class="fas fa-rocket"></i></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="header-logo" id="nav-logo-link">
+      <img src="assets/logo-white.svg" alt="Social Sigma" onerror="this.src='assets/logo.svg'">
+    </a>
+    <div class="header-right">
+      <a href="index.html" class="btn-header-back" id="btn-back-home">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+      </a>
+      <a href="https://wa.me/917900033017?text=Hi%20Social%20Sigma!%20I%20saw%20your%20offerings%20and%20would%20like%20to%20know%20more." target="_blank" class="btn-whatsapp-header" id="btn-wa-header">
+        <i class="fab fa-whatsapp"></i>
+        Chat Now
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero-section">
+    <canvas id="threejs-canvas"></canvas>
+    <!-- 3D floating info badges -->
+    <div class="hero-3d-badge b1"><span class="badge-val">5.8x</span>Avg ROAS</div>
+    <div class="hero-3d-badge b2"><span class="badge-val">+12M</span>Reach Generated</div>
+    <div class="hero-3d-badge b3"><span class="badge-val">320%</span>Viewer Growth</div>
+    <div class="hero-3d-badge b4"><span class="badge-val">11</span>Services Offered</div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="badge-pulse"></div>
+        Gurgaon's #1 Creative Digital Marketing Agency
+      </div>
+      <h1 class="hero-title">
+        Everything Your Brand<br>
+        Needs to <span class="line-lime">Dominate</span><br>
+        the <span class="line-blue">Digital Space</span>
+      </h1>
+      <p class="hero-subtitle">
+        From performance ads to drone shoots — Social Sigma is your one-stop powerhouse for brand growth, digital presence, and result-driven marketing.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/917900033017?text=Hi%20Social%20Sigma!%20I%20want%20to%20discuss%20services%20for%20my%20business." target="_blank" class="btn-whatsapp-hero" id="btn-wa-hero">
+          <i class="fab fa-whatsapp"></i>
+          Connect on WhatsApp
+        </a>
+        <a href="#contact-form" class="btn-primary" id="btn-hero-form">
+          Get Free Consultation <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip" id="stats-strip">
+    <div class="container">
+      <div class="stats-strip-grid">
+        <div class="stat-item reveal-item">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Clients Elevated</div>
+        </div>
+        <div class="stat-item reveal-item">
+          <div class="stat-num">+400</div>
+          <div class="stat-label">Social Posts Published</div>
+        </div>
+        <div class="stat-item reveal-item">
+          <div class="stat-num">+12M</div>
+          <div class="stat-label">Accounts Reached</div>
+        </div>
+        <div class="stat-item reveal-item">
+          <div class="stat-num">320%</div>
+          <div class="stat-label">Avg Viewer Lift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAPABILITIES SECTION -->
+  <section class="capabilities-section" id="services-section">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Our Core Services</span>
+        <h2 class="section-title">Creative Operations That <span style="color:var(--lime)">Scale</span></h2>
+        <p class="section-desc">We build structured frameworks to align every strategy with your ROI goals. Watch our rocket visit each service!</p>
+      </div>
+      <div class="cap-list" id="cap-list">
+        <div class="cap-row reveal-item" id="cap-0">
+          <div class="cap-num">01</div>
+          <div class="cap-body">
+            <div class="cap-title">Performance Marketing</div>
+            <div class="cap-desc">Data-driven campaigns focused on boosting conversions and accelerating your business growth with measurable ROI.</div>
+            <div class="cap-tags">
+              <span class="cap-tag">Paid Advertising</span>
+              <span class="cap-tag">Lead Generation</span>
+              <span class="cap-tag">Sales Funnel</span>
+              <span class="cap-tag">Conversion Optimisation</span>
+              <span class="cap-tag">Tracking &amp; Analytics</span>
+              <span class="cap-tag">E-Commerce Building</span>
+            </div>
+          </div>
+          <div class="cap-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="cap-row reveal-item" id="cap-1">
+          <div class="cap-num">02</div>
+          <div class="cap-body">
+            <div class="cap-title">Social Media Marketing</div>
+            <div class="cap-desc">Building your online presence with strategies that engage, excite, and convert followers into loyal customers.</div>
+            <div class="cap-tags">
+              <span class="cap-tag">Content Creation</span>
+              <span class="cap-tag">User Generated Content</span>
+              <span class="cap-tag">Strategy Planning</span>
+              <span class="cap-tag">Posting &amp; Scheduling</span>
+              <span class="cap-tag">Engagement Management</span>
+              <span class="cap-tag">Shoot and Photography</span>
+            </div>
+          </div>
+          <div class="cap-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="cap-row reveal-item" id="cap-2">
+          <div class="cap-num">03</div>
+          <div class="cap-body">
+            <div class="cap-title">Influencer Promotion</div>
+            <div class="cap-desc">Turning your brand's voice into a powerful presence that speaks authentically to your target audience.</div>
+            <div class="cap-tags">
+              <span class="cap-tag">White Listing</span>
+              <span class="cap-tag">Seeding</span>
+              <span class="cap-tag">UGC Content Generation</span>
+              <span class="cap-tag">Trend Hijacking</span>
+              <span class="cap-tag">Cost Optimization</span>
+              <span class="cap-tag">Creator Strategy</span>
+            </div>
+          </div>
+          <div class="cap-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="cap-row reveal-item" id="cap-3">
+          <div class="cap-num">04</div>
+          <div class="cap-body">
+            <div class="cap-title">SEO &amp; Web Development</div>
+            <div class="cap-desc">Custom solutions for fast, responsive, and scalable web experiences that dominate search rankings.</div>
+            <div class="cap-tags">
+              <span class="cap-tag">SEO Optimization</span>
+              <span class="cap-tag">Website Designing &amp; Dev</span>
+              <span class="cap-tag">E-Commerce Web Dev</span>
+              <span class="cap-tag">Google SERP Visibility</span>
+              <span class="cap-tag">Keyword Ranking</span>
+              <span class="cap-tag">Link Building</span>
+            </div>
+          </div>
+          <div class="cap-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="cap-row reveal-item" id="cap-4">
+          <div class="cap-num">05</div>
+          <div class="cap-body">
+            <div class="cap-title">Drone &amp; Photoshoot</div>
+            <div class="cap-desc">Cinematic aerial shoots and high-end creative photography that capture the true essence of your brand in 4K.</div>
+            <div class="cap-tags">
+              <span class="cap-tag">Aerial Cinematography</span>
+              <span class="cap-tag">Product &amp; Lifestyle Shoots</span>
+              <span class="cap-tag">4K Drone Footage</span>
+              <span class="cap-tag">Creative Concept Direction</span>
+              <span class="cap-tag">Color Grading</span>
+              <span class="cap-tag">Commercial Photography</span>
+            </div>
+          </div>
+          <div class="cap-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIZED SERVICES — BENTO REDESIGN -->
+  <section class="specialized-section" id="specialized-section">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Specialized Operations</span>
+        <h2 class="section-title">What <span style="color:var(--lime)">Additional</span> We Offer</h2>
+        <p class="section-desc">Six hyper-focused creative disciplines — each one engineered to capture attention and drive real-world results.</p>
+      </div>
+      <div class="spec-bento">
+
+        <div class="spec-bento-card reveal-item" id="spec-0">
+          <i class="fas fa-shopping-bag bento-bg-icon"></i>
+          <div class="bento-content">
+            <div class="spec-bento-num">01 / Product Shoot</div>
+            <div class="spec-bento-title">Stop Scrolls,<br>Start Sales</div>
+            <div class="spec-bento-desc">High-definition, stylistically curated product photography that makes your brand look as premium as it feels.</div>
+            <span class="spec-bento-badge"><i class="fas fa-camera-retro"></i> Premium Stills</span>
+          </div>
+        </div>
+
+        <div class="spec-bento-card reveal-item" id="spec-1">
+          <i class="fas fa-video bento-bg-icon"></i>
+          <div class="bento-content">
+            <div class="spec-bento-num">02 / Video Editing</div>
+            <div class="spec-bento-title">Raw Footage<br>→ Compelling Story</div>
+            <div class="spec-bento-desc">Pacing, color grading, and sound design that keeps your audience glued.</div>
+            <span class="spec-bento-badge"><i class="fas fa-film"></i> Cinematic Grade</span>
+          </div>
+        </div>
+
+        <div class="spec-bento-card reveal-item" id="spec-2">
+          <i class="fas fa-mobile-alt bento-bg-icon"></i>
+          <div class="bento-content">
+            <div class="spec-bento-num">03</div>
+            <div class="spec-bento-title">Reel's Creator</div>
+            <span class="spec-bento-badge"><i class="fas fa-fire"></i> Viral-First</span>
+          </div>
+        </div>
+
+        <div class="spec-bento-card reveal-item" id="spec-3">
+          <i class="fas fa-helicopter bento-bg-icon"></i>
+          <div class="bento-content">
+            <div class="spec-bento-num">04</div>
+            <div class="spec-bento-title">Drone Shoots</div>
+            <span class="spec-bento-badge"><i class="fas fa-paper-plane"></i> 4K Aerial</span>
+          </div>
+        </div>
+
+        <div class="spec-bento-card reveal-item" id="spec-4">
+          <i class="fas fa-camera bento-bg-icon"></i>
+          <div class="bento-content">
+            <div class="spec-bento-num">05 / Photography</div>
+            <div class="spec-bento-title">Capture the<br>Soul of Your Brand</div>
+            <div class="spec-bento-desc">From corporate headshots to lifestyle imagery — visuals that build trust instantly.</div>
+            <span class="spec-bento-badge"><i class="fas fa-aperture"></i> Brand Imagery</span>
+          </div>
+        </div>
+
+        <div class="spec-bento-card reveal-item" id="spec-5">
+          <i class="fas fa-users bento-bg-icon"></i>
+          <div class="bento-content">
+            <div class="spec-bento-num">06 / Influencer Marketing</div>
+            <div class="spec-bento-title">Connect with Voices<br>Your Customers Trust</div>
+            <div class="spec-bento-desc">End-to-end influencer campaigns — from creator selection to performance tracking — that turn followers into loyal customers.</div>
+            <span class="spec-bento-badge"><i class="fas fa-star"></i> Creator Collab</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D PROJECTS SHOWCASE -->
+  <section class="projects-3d-section" id="projects-3d-section">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="section-tag">Our Pride Work</span>
+        <h2 class="section-title">Companies We've <span style="color:var(--lime)">Worked For</span></h2>
+        <p class="section-desc">Brands that trusted us with their digital presence — real partnerships, real growth, real results.</p>
+      </div>
+
+      <!-- 3D Carousel Stage -->
+      <div class="projects-stage" id="projects-stage">
+        <div class="projects-carousel-3d" id="proj-carousel">
+
+          <div class="project-card-3d" id="proj-card-0">
+            <i class="fas fa-hotel proj-bg-icon"></i>
+            <div class="card-inner">
+              <div class="proj-category">Hospitality</div>
+              <div class="proj-name">The Royal Venetian</div>
+              <div class="proj-sub">Grand Resort · NH44 Panipat</div>
+              <span class="proj-roas-badge"><i class="fas fa-arrow-trend-up"></i> 4.5x ROAS &nbsp;·&nbsp; 342 Bookings</span>
+            </div>
+          </div>
+
+          <div class="project-card-3d" id="proj-card-1">
+            <i class="fas fa-tshirt proj-bg-icon"></i>
+            <div class="card-inner">
+              <div class="proj-category">Fashion</div>
+              <div class="proj-name">Mark Jillion | MJ</div>
+              <div class="proj-sub">Clothing Wholesaler · Gurgaon</div>
+              <span class="proj-roas-badge"><i class="fas fa-arrow-trend-up"></i> 5.2x ROAS &nbsp;·&nbsp; 2,450 Orders</span>
+            </div>
+          </div>
+
+          <div class="project-card-3d" id="proj-card-2">
+            <i class="fas fa-couch proj-bg-icon"></i>
+            <div class="card-inner">
+              <div class="proj-category">Interior Design</div>
+              <div class="proj-name">Key4You Interior</div>
+              <div class="proj-sub">Luxury Interiors · Gurgaon</div>
+              <span class="proj-roas-badge"><i class="fas fa-arrow-trend-up"></i> 6.1x ROAS &nbsp;·&nbsp; 185 Leads</span>
+            </div>
+          </div>
+
+          <div class="project-card-3d" id="proj-card-3">
+            <i class="fas fa-running proj-bg-icon"></i>
+            <div class="card-inner">
+              <div class="proj-category">Activewear</div>
+              <div class="proj-name">Black Wizard</div>
+              <div class="proj-sub">Sports Apparel · Gurgaon</div>
+              <span class="proj-roas-badge"><i class="fas fa-arrow-trend-up"></i> 4.8x ROAS &nbsp;·&nbsp; 1,890 Purchases</span>
+            </div>
+          </div>
+
+          <div class="project-card-3d" id="proj-card-4">
+            <i class="fas fa-play-circle proj-bg-icon"></i>
+            <div class="card-inner">
+              <div class="proj-category">Entertainment / OTT</div>
+              <div class="proj-name">Multiflix</div>
+              <div class="proj-sub">Streaming Platform · India</div>
+              <span class="proj-roas-badge"><i class="fas fa-star"></i> Content &amp; Brand Identity</span>
+            </div>
+          </div>
+
+          <div class="project-card-3d" id="proj-card-5">
+            <i class="fas fa-plus-circle proj-bg-icon"></i>
+            <div class="card-inner">
+              <div class="proj-category">And Growing...</div>
+              <div class="proj-name">And More</div>
+              <div class="proj-sub">More exciting collabs on the way</div>
+              <span class="proj-roas-badge"><i class="fas fa-rocket"></i> Your Brand Could Be Next</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Nav Controls -->
+      <div class="projects-nav">
+        <button class="proj-nav-btn" id="proj-prev" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+        <div class="proj-dots" id="proj-dots">
+          <div class="proj-dot active" data-idx="0"></div>
+          <div class="proj-dot" data-idx="1"></div>
+          <div class="proj-dot" data-idx="2"></div>
+          <div class="proj-dot" data-idx="3"></div>
+          <div class="proj-dot" data-idx="4"></div>
+          <div class="proj-dot" data-idx="5"></div>
+        </div>
+        <button class="proj-nav-btn" id="proj-next" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <!-- Infinite ticker of project names below -->
+      <div class="projects-ticker">
+        <div class="ticker-track" id="proj-ticker">
+          <div class="ticker-item"><span class="ticker-dot"></span> The Royal Venetian</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Mark Jillion | MJ</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Key4You Interior</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Black Wizard Sports</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Multiflix</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> And More...</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> The Royal Venetian</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Mark Jillion | MJ</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Key4You Interior</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Black Wizard Sports</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> Multiflix</div>
+          <div class="ticker-item"><span class="ticker-dot"></span> And More...</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-section" id="why-section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="reveal-item">
+          <span class="section-tag">Why Social Sigma</span>
+          <h2 class="section-title">We Don't Just Run Campaigns —<br>We <span style="color:var(--lime)">Build Empires</span></h2>
+          <ul class="why-list">
+            <li class="why-item">
+              <div class="why-check"><i class="fas fa-check"></i></div>
+              <div class="why-text">
+                <strong>100% Transparent Reporting</strong>
+                <p>Real-time dashboards, no fluff. You see exactly where every rupee goes and what results it drives.</p>
+              </div>
+            </li>
+            <li class="why-item">
+              <div class="why-check"><i class="fas fa-check"></i></div>
+              <div class="why-text">
+                <strong>Full-Stack Creative Team</strong>
+                <p>Designers, videographers, strategists and media buyers — all under one roof in Gurgaon.</p>
+              </div>
+            </li>
+            <li class="why-item">
+              <div class="why-check"><i class="fas fa-check"></i></div>
+              <div class="why-text">
+                <strong>Performance-First Mindset</strong>
+                <p>Every creative decision is backed by data. We optimize campaigns relentlessly until your ROAS flies high.</p>
+              </div>
+            </li>
+            <li class="why-item">
+              <div class="why-check"><i class="fas fa-check"></i></div>
+              <div class="why-text">
+                <strong>Trends, Technology &amp; Tactics</strong>
+                <p>We stay ahead of every algorithm update, platform change, and industry trend so your brand never falls behind.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="why-card reveal-item">
+          <div class="why-card-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Ready to Launch Your Brand?</h3>
+          <p style="margin-bottom:1.5rem">Whether you're starting from scratch or scaling an existing brand, Social Sigma brings the strategy, creativity, and technology to make it happen — fast.</p>
+          <p style="color:var(--lime); font-family:var(--font-heading); font-size:0.9rem; font-weight:700; margin-bottom:0.5rem">Gurgaon's Best Creative Agency</p>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.5rem">Serving brands across India | hello@socialsigma.in</p>
+          <a href="https://wa.me/917900033017?text=Hi%21%20I%20want%20to%20launch%20my%20brand%20with%20Social%20Sigma." target="_blank" class="btn-whatsapp-hero" id="btn-wa-why" style="display:inline-flex;">
+            <i class="fab fa-whatsapp"></i>
+            Let's Talk Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="cta-section">
+    <div class="cta-content">
+      <span class="section-tag">Start Today</span>
+      <h2 class="cta-title">Your Brand Deserves the <span style="color:var(--lime)">Sigma</span> Treatment</h2>
+      <p class="cta-desc">Stop blending in. Social Sigma crafts brands that <em>dikhte hain</em> — and because they're visible, they <em>bikte hain</em>. Let's build something powerful together.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/917900033017?text=Hi%20Social%20Sigma!%20I%20want%20to%20grow%20my%20brand.%20Let%27s%20connect!" target="_blank" class="btn-whatsapp-cta" id="btn-wa-cta">
+          <i class="fab fa-whatsapp"></i>
+          Connect on WhatsApp
+        </a>
+        <a href="#contact-form" class="btn-scroll-form" id="btn-fill-form">
+          Fill the Form <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="form-section" id="contact-form">
+    <div class="container">
+      <div class="form-grid">
+        <div class="form-info reveal-item">
+          <span class="section-tag">Get in Touch</span>
+          <h2>Let's Build<br>Something <span style="color:var(--lime)">Powerful</span></h2>
+          <p>Ready to launch or scale your brand presence? Send us an inquiry and our creative analysts will map out a customized action plan for you — completely free.</p>
+          <a href="mailto:hello@socialsigma.in" class="contact-detail" id="contact-email-link">
+            <div class="contact-detail-icon blue"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail-text"><label>Email Address</label><span>hello@socialsigma.in</span></div>
+          </a>
+          <a href="tel:+917900033017" class="contact-detail" id="contact-phone-link-1">
+            <div class="contact-detail-icon lime"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-detail-text"><label>Call Us — Primary</label><span>(+91) 790-003-3017</span></div>
+          </a>
+          <a href="tel:+918171275577" class="contact-detail" id="contact-phone-link-2">
+            <div class="contact-detail-icon blue"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-detail-text"><label>Call Us — Secondary</label><span>(+91) 817-127-5577</span></div>
+          </a>
+          <div style="margin-top:2rem; padding:1.2rem; background:rgba(193,255,114,0.05); border:1px solid rgba(193,255,114,0.15); border-radius:14px;">
+            <p style="font-size:0.85rem; color:var(--lime); font-family:var(--font-heading); font-weight:700; margin-bottom:6px;">Based in Gurgaon, India</p>
+            <p style="font-size:0.83rem; color:var(--text-muted);">Serving brands pan-India and globally. Response time: under 2 hours.</p>
+          </div>
+        </div>
+        <div class="form-embed reveal-item" id="google-form-embed">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNu1GOP5vCQi6Y5A_gWTCe4uXw6MsL_wH_wmv2dzfcN61G4Q/viewform?embedded=true" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0" title="Social Sigma Enquiry Form" loading="lazy">Loading...</iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo-white.svg" alt="Social Sigma" class="footer-logo" onerror="this.src='assets/logo.svg'">
+          <p class="footer-tagline">Gurgaon's premier branding and digital marketing agency. Crafting future-ready brands through a perfect fusion of vision, creativity, and performance technology.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" id="footer-home-link">Home</a></li>
+            <li><a href="index.html#about" id="footer-about-link">About Us</a></li>
+            <li><a href="index.html#services" id="footer-services-link">Services</a></li>
+            <li><a href="portfolio.html" id="footer-portfolio-link">Portfolio</a></li>
+            <li><a href="offerings.html" id="footer-offerings-link" style="color:var(--lime); font-weight:600;">Offerings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/917900033017" target="_blank" id="footer-wa-link">WhatsApp Us</a></li>
+            <li><a href="mailto:hello@socialsigma.in" id="footer-email-link">hello@socialsigma.in</a></li>
+            <li><a href="https://www.instagram.com/socialsigma.in/" target="_blank" id="footer-ig-link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/socialsigma.in" target="_blank" id="footer-fb-link">Facebook</a></li>
+            <li><a href="https://www.behance.net/social_sigma" target="_blank" id="footer-be-link">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Social Sigma. All rights reserved. | Gurgaon, India</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/socialsigma.in" target="_blank" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/socialsigma.in/" target="_blank" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.behance.net/social_sigma" target="_blank" class="footer-social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+          <a href="https://wa.me/917900033017" target="_blank" class="footer-social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/917900033017?text=Hi%20Social%20Sigma!%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" class="floating-whatsapp" id="floating-wa-btn" aria-label="Chat on WhatsApp">
+    <div class="wa-ripple"></div>
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <script>
+  // ===== CUSTOM ROCKET CURSOR =====
+  const cursorEl = document.getElementById('cursor-rocket');
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  let curX = mouseX, curY = mouseY;
+  document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+  (function animCursor() {
+    curX += (mouseX - curX) * 0.12;
+    curY += (mouseY - curY) * 0.12;
+    cursorEl.style.left = curX + 'px';
+    cursorEl.style.top  = curY + 'px';
+    requestAnimationFrame(animCursor);
+  })();
+
+  // ===== SCROLL PROGRESS =====
+  const scrollBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+    scrollBar.style.width = (s / d * 100) + '%';
+  });
+
+  // ===== STAR CANVAS =====
+  const sc = document.getElementById('star-canvas'), sx = sc.getContext('2d');
+  let stars = [];
+  function resizeStar() { sc.width = window.innerWidth; sc.height = window.innerHeight; }
+  function initStars() {
+    stars = [];
+    const n = Math.floor(sc.width * sc.height / 5500);
+    for (let i = 0; i < n; i++) {
+      stars.push({ x: Math.random()*sc.width, y: Math.random()*sc.height, r: Math.random()*1.2+0.2, a: Math.random()*0.6+0.2, spd: Math.random()*0.0005+0.0002, ph: Math.random()*Math.PI*2 });
+    }
+  }
+  function drawStars(t) {
+    sx.clearRect(0, 0, sc.width, sc.height);
+    stars.forEach(s => {
+      const a = s.a * (0.6 + 0.4 * Math.sin(t*s.spd*1000+s.ph));
+      sx.beginPath(); sx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      sx.fillStyle = `rgba(255,255,255,${a})`; sx.fill();
+    });
+  }
+  resizeStar(); initStars();
+  window.addEventListener('resize', () => { resizeStar(); initStars(); });
+
+  // ===== FLYING ROCKET =====
+  const rc = document.getElementById('rocket-canvas'), rx = rc.getContext('2d');
+  function resizeRocket() { rc.width = window.innerWidth; rc.height = window.innerHeight; }
+  resizeRocket();
+  window.addEventListener('resize', resizeRocket);
+
+  const capIds  = ['cap-0','cap-1','cap-2','cap-3','cap-4'];
+  const specIds = ['spec-0','spec-1','spec-2','spec-3','spec-4','spec-5'];
+  const allIds  = [...capIds, ...specIds];
+  const allTargets = allIds.map(id => document.getElementById(id));
+
+  let rX = window.innerWidth * 0.5, rY = window.innerHeight * 0.15;
+  let rAngle = 0, curTgt = 0, dwell = 0, dwellMax = 80;
+  let phase = 'fly', orbitA = 0, trail = [], lastT = 0;
+
+  function getTgtCenter(el) {
+    const r = el.getBoundingClientRect();
+    return { x: r.left + r.width/2, y: r.top + r.height/2 };
+  }
+
+  function hlTarget(idx) {
+    allTargets.forEach((el, i) => {
+      if (!el) return;
+      el.classList.toggle('rocket-active', i === idx);
+    });
+  }
+
+  function drawRocket(ctx, x, y, angle, scale) {
+    ctx.save(); ctx.translate(x,y); ctx.rotate(angle); ctx.scale(scale,scale);
+    // flame
+    const fg = ctx.createLinearGradient(0,12,0,32);
+    fg.addColorStop(0,'rgba(255,165,0,0.9)'); fg.addColorStop(0.5,'rgba(255,80,0,0.5)'); fg.addColorStop(1,'rgba(255,50,0,0)');
+    ctx.beginPath(); ctx.moveTo(-5,12); ctx.quadraticCurveTo(0, 28+Math.random()*6, 5,12);
+    ctx.fillStyle = fg; ctx.fill();
+    // body
+    const bg = ctx.createLinearGradient(-8,-16,8,16);
+    bg.addColorStop(0,'#ffffff'); bg.addColorStop(1,'#c0c8d8');
+    ctx.beginPath(); ctx.moveTo(0,-18); ctx.quadraticCurveTo(-8,-5,-8,12); ctx.lineTo(8,12); ctx.quadraticCurveTo(8,-5,0,-18);
+    ctx.fillStyle = bg; ctx.fill();
+    // nose
+    ctx.beginPath(); ctx.moveTo(0,-18); ctx.quadraticCurveTo(-5,-8,-5,-4); ctx.lineTo(5,-4); ctx.quadraticCurveTo(5,-8,0,-18);
+    ctx.fillStyle = '#1877F2'; ctx.fill();
+    // fins
+    ctx.beginPath(); ctx.moveTo(-8,8); ctx.lineTo(-14,18); ctx.lineTo(-8,14); ctx.closePath(); ctx.fillStyle='#c1ff72'; ctx.fill();
+    ctx.beginPath(); ctx.moveTo(8,8); ctx.lineTo(14,18); ctx.lineTo(8,14); ctx.closePath(); ctx.fillStyle='#c1ff72'; ctx.fill();
+    // halo
+    const hg = ctx.createRadialGradient(0,0,0,0,0,22);
+    hg.addColorStop(0,'rgba(193,255,114,0.25)'); hg.addColorStop(1,'rgba(193,255,114,0)');
+    ctx.beginPath(); ctx.arc(0,0,22,0,Math.PI*2); ctx.fillStyle=hg; ctx.fill();
+    ctx.restore();
+  }
+
+  function mainLoop(t) {
+    drawStars(t);
+    if (rc.width !== window.innerWidth || rc.height !== window.innerHeight) resizeRocket();
+    rx.clearRect(0, 0, rc.width, rc.height);
+    const dt = Math.min((t - lastT) / 16.67, 3); lastT = t;
+
+    if (phase === 'fly') {
+      const el = allTargets[curTgt];
+      if (el) {
+        const tc = getTgtCenter(el);
+        const dx = tc.x - rX, dy = tc.y - rY;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist > 0) {
+          const tA = Math.atan2(dy,dx) + Math.PI/2;
+          let da = tA - rAngle;
+          while (da > Math.PI) da -= Math.PI*2;
+          while (da < -Math.PI) da += Math.PI*2;
+          rAngle += da * 0.08 * dt;
+          const spd = Math.min(dist*0.05, 12) * dt;
+          rX += (dx/dist)*spd; rY += (dy/dist)*spd;
+        }
+        trail.push({x:rX,y:rY,age:0}); if(trail.length>40) trail.shift();
+        if (dist < 35) { phase='dwell'; dwell=0; hlTarget(curTgt); orbitA=0; }
+      }
+    } else {
+      orbitA += 0.04 * dt;
+      const el = allTargets[curTgt];
+      if (el) {
+        const tc = getTgtCenter(el);
+        rX = tc.x + Math.cos(orbitA)*60; rY = tc.y + Math.sin(orbitA)*28;
+        rAngle = orbitA + Math.PI*0.5;
+      }
+      trail.push({x:rX,y:rY,age:0}); if(trail.length>40) trail.shift();
+      dwell += dt;
+      if (dwell >= dwellMax) { phase='fly'; curTgt=(curTgt+1)%allTargets.length; hlTarget(-1); }
+    }
+
+    // draw trail
+    trail.forEach(pt => {
+      pt.age += dt;
+      const a = Math.max(0, 1 - pt.age/40) * 0.5;
+      rx.beginPath(); rx.arc(pt.x, pt.y, 3*a, 0, Math.PI*2);
+      rx.fillStyle = `rgba(193,255,114,${a})`; rx.fill();
+    });
+
+    drawRocket(rx, rX, rY, rAngle, 1.1);
+    requestAnimationFrame(mainLoop);
+  }
+  requestAnimationFrame(mainLoop);
+
+  // ===== SCROLL REVEAL =====
+  const revEls = document.querySelectorAll('.reveal-item, .why-item');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revEls.forEach(el => obs.observe(el));
+
+  // ===== SMOOTH SCROLL =====
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+
+  // ===== HEADER SCROLL =====
+  const hdr = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    hdr.style.background = window.scrollY > 50 ? 'rgba(5,7,10,0.97)' : 'rgba(5,7,10,0.85)';
+  });
+
+  // ============================================================
+  //  THREE.JS 3D HERO BACKGROUND SCENE
+  // ============================================================
+  (function() {
+    const canvas3d = document.getElementById('threejs-canvas');
+    if (!canvas3d || typeof THREE === 'undefined') return;
+
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas3d, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+
+    function resizeThree() {
+      const w = window.innerWidth, h = window.innerHeight;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    resizeThree();
+    window.addEventListener('resize', resizeThree);
+
+    // Ambient + point lights
+    scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+    const ptBlue = new THREE.PointLight(0x1877F2, 3, 20);
+    ptBlue.position.set(-4, 4, 3);
+    scene.add(ptBlue);
+    const ptLime = new THREE.PointLight(0xc1ff72, 3, 20);
+    ptLime.position.set(4, -3, 2);
+    scene.add(ptLime);
+    const ptWhite = new THREE.PointLight(0xffffff, 1.5, 10);
+    ptWhite.position.set(0, 0, 5);
+    scene.add(ptWhite);
+
+    // Wireframe material variants
+    const wireMat  = new THREE.MeshPhongMaterial({ color: 0x1877F2, wireframe: true, transparent: true, opacity: 0.25 });
+    const wireLime = new THREE.MeshPhongMaterial({ color: 0xc1ff72, wireframe: true, transparent: true, opacity: 0.2 });
+    const solidMat = new THREE.MeshPhongMaterial({ color: 0x0a1428, transparent: true, opacity: 0.35, shininess: 80 });
+
+    // ---- Object 1: Large Rotating Icosahedron ----
+    const icoGeo = new THREE.IcosahedronGeometry(1.6, 1);
+    const icoWire = new THREE.Mesh(icoGeo, wireMat);
+    icoWire.position.set(-2.5, 0.5, -2);
+    scene.add(icoWire);
+    const icoSolid = new THREE.Mesh(icoGeo, solidMat.clone());
+    icoSolid.position.copy(icoWire.position);
+    scene.add(icoSolid);
+
+    // ---- Object 2: Torus Knot ----
+    const torusGeo = new THREE.TorusKnotGeometry(0.9, 0.28, 80, 12);
+    const torusWire = new THREE.Mesh(torusGeo, wireLime);
+    torusWire.position.set(3, -0.8, -1.5);
+    scene.add(torusWire);
+
+    // ---- Object 3: Octahedron ----
+    const octaGeo = new THREE.OctahedronGeometry(0.9, 0);
+    const octaWire = new THREE.Mesh(octaGeo, new THREE.MeshPhongMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: 0.15 }));
+    octaWire.position.set(1.5, 2.2, -2);
+    scene.add(octaWire);
+
+    // ---- Object 4: Floating sphere ----
+    const sphGeo = new THREE.SphereGeometry(0.5, 16, 16);
+    const sphWire = new THREE.Mesh(sphGeo, new THREE.MeshPhongMaterial({ color: 0x1877F2, wireframe: true, transparent: true, opacity: 0.3 }));
+    sphWire.position.set(-1.5, -2, -1);
+    scene.add(sphWire);
+
+    // ---- Floating particles ----
+    const pGeo = new THREE.BufferGeometry();
+    const pCount = 120;
+    const pPos = new Float32Array(pCount * 3);
+    for (let i = 0; i < pCount * 3; i++) pPos[i] = (Math.random() - 0.5) * 14;
+    pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+    const pMat = new THREE.PointsMaterial({ color: 0xc1ff72, size: 0.045, transparent: true, opacity: 0.7 });
+    const points = new THREE.Points(pGeo, pMat);
+    scene.add(points);
+
+    // Mouse parallax
+    let mx3d = 0, my3d = 0;
+    document.addEventListener('mousemove', e => {
+      mx3d = (e.clientX / window.innerWidth  - 0.5) * 2;
+      my3d = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    let t3 = 0;
+    function animate3d() {
+      requestAnimationFrame(animate3d);
+      t3 += 0.006;
+
+      // Rotate shapes
+      icoWire.rotation.x += 0.003; icoWire.rotation.y += 0.005;
+      icoSolid.rotation.copy(icoWire.rotation);
+      torusWire.rotation.x += 0.006; torusWire.rotation.y += 0.004;
+      octaWire.rotation.x += 0.004; octaWire.rotation.z += 0.006;
+      sphWire.rotation.y += 0.008; sphWire.rotation.x += 0.004;
+      points.rotation.y += 0.0012;
+
+      // Camera parallax follow mouse
+      camera.position.x += (mx3d * 0.6 - camera.position.x) * 0.04;
+      camera.position.y += (-my3d * 0.4 - camera.position.y) * 0.04;
+      camera.lookAt(scene.position);
+
+      // Pulse light intensity
+      ptBlue.intensity = 2.5 + 1.5 * Math.sin(t3 * 1.2);
+      ptLime.intensity = 2.5 + 1.5 * Math.sin(t3 * 0.9 + 1);
+
+      renderer.render(scene, camera);
+    }
+    animate3d();
+  })();
+
+  // ============================================================
+  //  3D MOUSE-TILT ON SPEC CARDS
+  // ============================================================
+  document.querySelectorAll('.spec-card').forEach(card => {
+    card.addEventListener('mousemove', function(e) {
+      const rect = this.getBoundingClientRect();
+      const cx = rect.left + rect.width  / 2;
+      const cy = rect.top  + rect.height / 2;
+      const dx = (e.clientX - cx) / (rect.width  / 2);
+      const dy = (e.clientY - cy) / (rect.height / 2);
+      const rotX = -dy * 12;
+      const rotY =  dx * 12;
+      this.style.transform = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.04,1.04,1.04) translateZ(10px)`;
+    });
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
+  });
+
+  // 3D tilt on capability rows
+  document.querySelectorAll('.cap-row').forEach(row => {
+    row.addEventListener('mousemove', function(e) {
+      const rect = this.getBoundingClientRect();
+      const dy = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
+      const dx = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
+      this.style.transform = `perspective(1000px) rotateX(${-dy * 4}deg) rotateY(${dx * 4}deg) translateZ(6px)`;
+    });
+    row.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
+  });
+
+  // ============================================================
+  //  SPAWNING FLOATING 3D CSS PARTICLES
+  // ============================================================
+  (function spawnParticles() {
+    const colors = ['rgba(193,255,114,0.7)', 'rgba(24,119,242,0.7)', 'rgba(255,255,255,0.5)'];
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle-3d';
+      const size = Math.random() * 5 + 2;
+      const dur  = Math.random() * 14 + 10;
+      const delay = Math.random() * -20;
+      const left  = Math.random() * 100;
+      p.style.cssText = [
+        'width:' + size + 'px',
+        'height:' + size + 'px',
+        'left:' + left + 'vw',
+        'background:' + colors[Math.floor(Math.random() * colors.length)],
+        'animation-duration:' + dur + 's',
+        'animation-delay:' + delay + 's',
+        'box-shadow:0 0 8px currentColor',
+        'filter:blur(0.5px)',
+      ].join(';');
+      document.body.appendChild(p);
+    }
+  })();
+
+  // ============================================================
+  //  3D PROJECT CAROUSEL
+  // ============================================================
+  (function() {
+    const cards   = document.querySelectorAll('.project-card-3d');
+    const dots    = document.querySelectorAll('.proj-dot');
+    const prevBtn = document.getElementById('proj-prev');
+    const nextBtn = document.getElementById('proj-next');
+    const total   = cards.length;
+    let current   = 0;
+    let autoTimer;
+
+    function getAngle(i) {
+      return (360 / total) * i;
+    }
+
+    const radius = 280; // px, horizontal spread
+
+    function layoutCards(activeIdx) {
+      cards.forEach((card, i) => {
+        const offset = i - activeIdx;
+        // Wrap around
+        let pos = offset;
+        if (pos >  total/2) pos -= total;
+        if (pos < -total/2) pos += total;
+
+        const angle   = (pos / total) * 120; // degree spread
+        const tx      = pos * 200;
+        const tz      = -Math.abs(pos) * 120;
+        const ry      = -angle;
+        const scale   = pos === 0 ? 1 : 0.78 - Math.abs(pos) * 0.05;
+        const opacity = pos === 0 ? 1 : Math.max(0.25, 0.7 - Math.abs(pos) * 0.25);
+        const zIndex  = pos === 0 ? 10 : 5 - Math.abs(pos);
+
+        card.style.transform  = `translateX(${tx}px) translateZ(${tz}px) rotateY(${ry}deg) scale(${scale})`;
+        card.style.opacity    = opacity;
+        card.style.zIndex     = zIndex;
+        card.style.transition = 'transform 0.7s cubic-bezier(0.23,1,0.32,1), opacity 0.5s ease';
+        card.style.boxShadow  = pos === 0 ? '0 30px 80px rgba(0,0,0,0.8), 0 0 60px rgba(24,119,242,0.2)' : 'none';
+      });
+
+      // Update dots
+      dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+    }
+
+    function goTo(idx) {
+      current = ((idx % total) + total) % total;
+      layoutCards(current);
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.idx); resetAuto(); }));
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    const stage = document.getElementById('projects-stage');
+    if (stage) {
+      stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      stage.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); resetAuto(); }
+      });
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(next, 3500);
+    }
+
+    // Init
+    layoutCards(0);
+    autoTimer = setInterval(next, 3500);
+
+    // 3D Mouse parallax on hovered active card
+    cards.forEach(card => {
+      card.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const cx = rect.left + rect.width  / 2;
+        const cy = rect.top  + rect.height / 2;
+        const rx = -((e.clientY - cy) / (rect.height / 2)) * 10;
+        const ry =  ((e.clientX - cx) / (rect.width  / 2)) * 10;
+        this.style.transform += ` rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+      card.addEventListener('mouseleave', function() {
+        layoutCards(current); // re-snap
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
